@@ -1344,6 +1344,10 @@ body.clinic_version .desc {
 	z-index:2
 }
 
+.topperio{
+	 margin-top: 5px;
+}
+
 .diceStatCounter{
 	width: 60%;
 	margin: auto;
