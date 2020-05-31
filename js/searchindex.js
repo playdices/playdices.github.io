@@ -13,7 +13,7 @@ function SearchPage(url, title, keywords, description)
 function SearchDatabase()
 {
    database_length = 0;
-   this[database_length++] = new SearchPage("index.html", "Main Page", "Dice - Free to play!", "");
+   this[database_length++] = new SearchPage("index.html", "Main Page", "main page dice free to play", "Dice - Free to play!");
    
    return this;
 }
