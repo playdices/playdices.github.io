@@ -13,21 +13,7 @@ function SearchPage(url, title, keywords, description)
 function SearchDatabase()
 {
    database_length = 0;
-   this[database_length++] = new SearchPage("index.html", "Untitled Page", "untitled page search this website ", "");
-   this[database_length++] = new SearchPage("page1.html", "Untitled Page", "untitled page sdfsdf ", "");
-   this[database_length++] = new SearchPage("index.html", "Untitled Page", "untitled page search this website ", "");
-   this[database_length++] = new SearchPage("page1.html", "Untitled Page", "untitled page sdfsdf ", "");
-   this[database_length++] = new SearchPage("index.html", "Untitled Page", "untitled page search this website ", "");
-   this[database_length++] = new SearchPage("page1.html", "Untitled Page", "untitled page sdfsdf ", "");
-   this[database_length++] = new SearchPage("index.html", "Untitled Page", "untitled page search this website ", "");
-   this[database_length++] = new SearchPage("page1.html", "Untitled Page", "untitled page sdfsdf ", "");
-   this[database_length++] = new SearchPage("index.html", "Untitled Page", "untitled page search this website ", "");
-   this[database_length++] = new SearchPage("page1.html", "Untitled Page", "untitled page sdfsdf ", "");
-   this[database_length++] = new SearchPage("index.html", "Untitled Page", "untitled page search this website ", "");
-   this[database_length++] = new SearchPage("page1.html", "Untitled Page", "untitled page sdfsdf ", "");
-   this[database_length++] = new SearchPage("index.html", "Untitled Page", "untitled page search this website ", "");
-   this[database_length++] = new SearchPage("page1.html", "Untitled Page", "untitled page sdfsdf ", "");
-   this[database_length++] = new SearchPage("index.html", "Untitled Page", "untitled page search this website ", "");
-   this[database_length++] = new SearchPage("page1.html", "Untitled Page", "untitled page sdfsdf ", "");
+   this[database_length++] = new SearchPage("index.html", "Main Page", "Dice - Free to play!", "");
+   
    return this;
 }
