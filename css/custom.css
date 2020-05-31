@@ -1344,6 +1344,15 @@ body.clinic_version .desc {
 	z-index:2
 }
 
+.diceStatCounter{
+	width: 60%;
+	margin: auto;
+}
+
+.inlined{
+	display: inline;
+}
+
 
 /** END OF THE SEARCH CSS **/
 
