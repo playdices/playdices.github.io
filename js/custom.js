@@ -353,6 +353,8 @@ var TxtType = function(el, toRotate, period) {
 	
 /*== MAKE EMAIL ==*/
 
+/*== ONLINE USER COUNTER ==*/
+
 
 
 /*== GO TO TOP ON RELOAD FIX ==*/
