@@ -219,7 +219,7 @@
 						 
 						   <form action="#" onsubmit="emailPortal();return false;" autocomplete="on">
 						   
-							  <input name="semail" class="form-control" type="email" placeholder="Email" required="">
+							  <input name="semail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" type="email" placeholder="Email" required="">
 							  
                               <button id="mc-submitted" class="mc-submit" type="submit"><i class="fa fa-paper-plane test"></i></button>
 							  
