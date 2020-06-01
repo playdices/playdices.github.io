@@ -350,6 +350,24 @@ var TxtType = function(el, toRotate, period) {
 
 	}
 	
+	function emailPortalContact(){
+		
+			var ffirstname = document.getElementsByName('formfirstname')[0].value;
+			var flastnname = document.getElementsByName('formlastname')[0].value;
+			var femail = document.getElementsByName('formemail')[0].value;
+			var fsubject = document.getElementsByName('formsubject')[0].value;
+			var fmessage = document.getElementsByName('formmessage')[0].value;
+			
+			var emailTo = "jerwinsbest@gmail.com";
+			var emailSub = fsubject + " by " + ffirstname + " " + flastnname + " (Dice)";
+			var emailBody = "Reported by: %0D%0A" +  flastnname + ", " + ffirstname +
+							" [" + femail + "] %0D%0A%0D%0A" + "Message: %0D%0A" + fmessage + "%0D%0A%0D%0A"; 
+			
+			
+			window.open("mailto:"+emailTo+'?subject='+emailSub+'&body='+emailBody);
+
+	}
+	
 /*== MAKE EMAIL ==*/
 
 
