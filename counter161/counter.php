@@ -147,3 +147,5 @@ if ( strlen($thousands_separator) )
 // Print out Javascript code and exit
 echo("document.write('{$count}');");
 exit();
+
+?>
