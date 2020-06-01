@@ -287,9 +287,8 @@ var TxtType = function(el, toRotate, period) {
 		  
 			  //ELEMENTS
 	
-			  
-			  ShowObjectWithEffect('search', 1, 'dropup', 350, 'easeInQuint'); //SHOW
 			  ShowObjectWithEffect('theElement', 0, 'fade', 250, 'easeOutQuint');//HIDE
+			  ShowObjectWithEffect('search', 1, 'fade', 350, 'easeOutExpo'); //SHOW
 			  window.scrollTo(0, 0);
 		    
 		    return false;
@@ -300,8 +299,8 @@ var TxtType = function(el, toRotate, period) {
 
 		        //ELEMENTS
 				
-				ShowObjectWithEffect('theElement', 1, 'dropdown', 350, 'easeOutQuint'); //SHOW
 				ShowObjectWithEffect('search', 0, 'fade', 250, 'easeInQuint'); //HIDE
+				ShowObjectWithEffect('theElement', 1, 'dropdown', 350, 'easeOutQuint'); //SHOW
 				window.scrollTo(0, 0);
 			  
 			return false;

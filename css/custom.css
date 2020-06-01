@@ -601,7 +601,7 @@ body.clinic_version .dev-list .widget small {
     font-weight: 600;
     letter-spacing: 0.5px;
     font-size: 17px;
-    color: #0071d1;
+    color: #106247;
 }
 #price.section {
     background-attachment: fixed;
@@ -1344,49 +1344,69 @@ body.clinic_version .desc {
 	z-index:2
 }
 
-.labelVisitors{
-	 margin-top: 20px;
-}
-
-.centerio{
-	
-	  display: block;
-	  margin-left: auto;
-	  margin-right: auto;
-}
-
-.inlined{
-	display: inline;
-}
-
-
 /** END OF THE SEARCH CSS **/
 
-.googleForm{
-	background-color #FFFFFF;
-	background-image: linear-gradient(315deg, #F2F2F2 0%, #FFFFFF 50%);
-}
+/** OTHER CUSTOM CSS STYLES **/
 
-/* no text selection */
-.noselect {
-	-webkit-touch-callout: none; /* iOS Safari */
-	-webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* Internet Explorer/Edge */
-	user-select: none; /* Non-prefixed version, currently
-						supported by Chrome and Opera */
-						
-}
-
-::selection {
-  background-color: #99FFCC;
-  color: #000000;
-}
-
+	/** Smooth Scroll **/
 	html {
 		scroll-behavior: smooth;
 	}
+	
+	/** Text Selection **/
+	::selection {
+	  background-color: #99FFCC;
+	  color: #000000;
+	}
+
+	/* No Text Selection */
+	.noselect {
+		-webkit-touch-callout: none; /* iOS Safari */
+		-webkit-user-select: none; /* Safari */
+		-khtml-user-select: none; /* Konqueror HTML */
+		-moz-user-select: none; /* Firefox */
+		-ms-user-select: none; /* Internet Explorer/Edge */
+		user-select: none; /* Non-prefixed version, currently
+							supported by Chrome and Opera */
+							
+	}
+
+	/* Other Styles */
+	
+	.labelVisitors{
+		 margin-top: 20px;
+	}
+
+	.centerio{
+		
+		  display: block;
+		  margin-left: auto;
+		  margin-right: auto;
+	}
+
+	.inlined{
+		display: inline;
+	}
+
+	.googleForm{
+		background-color #FFFFFF;
+		background-image: linear-gradient(315deg, #F2F2F2 0%, #FFFFFF 50%);
+	}
+	
+	.justified{
+		text-align: justify;
+		text-justify: inter-word;
+	}
+	
+	.headline{
+		z-index: 1000;
+	}
+	
+	.iconic{
+		z-index: 1;
+	}
+	
+/** OTHER CUSTOM CSS STYLES **/
 
 
 @media (min-width:768px) and (max-width:991px) {
