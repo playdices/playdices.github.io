@@ -353,15 +353,6 @@ var TxtType = function(el, toRotate, period) {
 	
 /*== MAKE EMAIL ==*/
 
-/*== HIT VISITOR COUNTER ==*/
-
-	document.addEventListener("DOMContentLoaded", function(event) {
-		  
-	
-	  });
-
-/*== HIT VISITOR COUNTER ==*/
-
 
 /*== GO TO TOP ON RELOAD FIX ==*/
 
