@@ -1433,6 +1433,10 @@ body.clinic_version .desc {
 	  padding-bottom: 5px;
 	}
 	
+	.reFixed{
+		resize: none;
+	}
+	
 	.paddingFormGroup{
 		padding-top: 15px;
 	}
