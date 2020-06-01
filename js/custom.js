@@ -357,11 +357,7 @@ var TxtType = function(el, toRotate, period) {
 
 	document.addEventListener("DOMContentLoaded", function(event) {
 		  
-			  var hitVisitorCount = document.getElementById("hitVisitorCounter").innerHTML;
-			  alert(hitVisitorCount);
-		
-		
-				
+	
 	  });
 
 /*== HIT VISITOR COUNTER ==*/
