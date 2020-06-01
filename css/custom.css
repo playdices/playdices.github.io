@@ -1353,6 +1353,11 @@ body.clinic_version .desc {
 		scroll-behavior: smooth;
 	}
 	
+	/** Mobile Friendly **/
+	body{
+		overflow-x: hidden;
+	}
+	
 	/** Text Selection **/
 	::selection {
 	  background-color: #99FFCC;
