@@ -237,19 +237,24 @@
                </div>
                <div class="col-md-4">
                   <div class="subcriber-info">
-                     <h3 class="noselect">EMAIL US</h3>
-                     <p>If you have a problems or technical issues, just send an email for your inquiry.</p>
+                     <h3 class="noselect">SUBSCRIBE</h3>
+                     <p>If you want to receive newsletter and updates from us. Subscribe to now!</p>
                      <div class="subcriber-box">
                         
                            <div class=" mc-form newsletter-form">
+						 
+						   <form action="#" onsubmit="emailPortal();return false;" autocomplete="on">
 						   
-                              <input type="email" autocomplete="on" id="mc-email" placeholder="Name" class="form-control" name="EMAIL">
+							  <input name="semail" class="form-control" type="email" placeholder="Email" required="">
 							  
-                              <button id="mc-submitted" class="mc-submit mc-trigger" onclick="emailPortal();return false;"><i class="fa fa-paper-plane test"></i></button>
+                              <button id="mc-submitted" class="mc-submit" type="submit"><i class="fa fa-paper-plane test"></i></button>
+							  
+							</form>  
 							  
                            </div>
                         
                      </div>
+					 
                   </div>
                </div>
             </div>
