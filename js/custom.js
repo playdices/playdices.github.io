@@ -353,8 +353,18 @@ var TxtType = function(el, toRotate, period) {
 	
 /*== MAKE EMAIL ==*/
 
-/*== ONLINE USER COUNTER ==*/
+/*== HIT VISITOR COUNTER ==*/
 
+	document.addEventListener("DOMContentLoaded", function(event) {
+		  
+			  var hitVisitorCount = document.getElementById("hitVisitorCounter").innerHTML;
+			  alert(hitVisitorCount);
+		
+		
+				
+	  });
+
+/*== HIT VISITOR COUNTER ==*/
 
 
 /*== GO TO TOP ON RELOAD FIX ==*/
