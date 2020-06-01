@@ -1344,13 +1344,15 @@ body.clinic_version .desc {
 	z-index:2
 }
 
-.topperio{
-	 margin-top: 15px;
+.labelVisitors{
+	 margin-top: 20px;
 }
 
-.diceStatCounter{
-	width: 60%;
-	margin: auto;
+.centerio{
+	
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
 }
 
 .inlined{
