@@ -80,7 +80,8 @@ a:active {
 }
 
 ::selection {
-    background: #ccc;
+    background-color: #99FFCC;
+	  color: #000000;
 }
 
 ::-moz-selection {
