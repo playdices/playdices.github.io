@@ -141,85 +141,53 @@
 				  <div class="center">
 				  
 						<h4 id="shareStatus">Please select an action!</h4>
+						
+						
               
 					</div>
-				  
-					<div id="optionIn" class="menu">
 					
-						  <div class="form">
-						  
-							<div class="form-group">
-								<div class="center">
-								
-								  <div id="optionInA" class="paddingRopt">
-									<button type="button" onclick="shareScreen();return false;">Share</button>
-								  </div> 
-								   
-								   <div id="optionInB" class="paddingLopt">
-									<button type="button" onclick="viewScreen();return false;">View</button>
-								   </div> 
-								  
-								</div>
-							</div>  
-						 </div>
-						
-					</div>
 					
-					<div id="optionBack" class="menu backstage">
-						<div class="form">
-							  
-							<div class="form-group">
-								<div class="center">
-									
-									<button type="button" onclick="backScreen();return false;">Back</button>
-									
-								</div>
-							</div>  
-						</div>
-					</div>
 					
-					<p class="notes">Iframe shows below...</p>
-					
-					<!-- -->
-					
-					<div id="sharingView" class="iframe-container backstage">
-					
-						<div class="containerIframe"> 
-						  <iframe id="sharingFrameView" name="sharingFrameView" class="responsive-iframeIframe" scrolling="no" frameborder="0" src="http://playdices.github.io/screenshare/share/" allowfullscreen ></iframe>
+						<div id="optionIn" class="form">
+                        
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="center">
+									   
+										<button type="button" onclick="shareScreen();return false;">Share</button>
+										<button type="button" onclick="viewScreen();return false;">View</button>
+										
+									</div>
+                                </div>
+                            </div>
+                        
 						</div>
 						
-					</div>
-					
-					<div id="sharedView" class="iframe-container backstage">
-					
-					<p class="notes">Input Details...</p>
-					
-					<form action="#" onsubmit="viewSession();return false;" autocomplete="on">
-					
-						<div class="form-group paddingFormGroup">
-							  
-							<label>Enter Screen Share ID</label>
-							<input id="ssid" name="ssid" class="form-control sessionID" type="number" placeholder="Screen Share ID" required="">
+						<div id="optionBack" class="form backstage">
+                        
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="center">
+									   
+										<button type="button" onclick="backScreen();return false;">Back</button>
+										
+									</div>
+                                </div>
+                            </div>
+                        
+						</div>
 						
-									  
-						</div>
+					<div id="sharingView">
 					
-						<div class="form-group paddingFormGroup center">
-							  
-							<button type="submit">Submit</button>
-										  
-						</div>
+					<iframe name="sharingFrameView" id="sharingFrameView" style="width:100%;height:720px;" src="http://playdices.github.io/screenshare/share/" scrolling="no" frameborder="0"></iframe>
 					
-					</form>
-					
-					<p class="notes">Iframe shows below...</p>
-					
-							<div class="containerIframe"> 
-							  <iframe id="sharedFrameView" name="sharedFrameView" class="responsive-iframeIframe" scrolling="no" frameborder="0" src="http://playdices.github.io/screenshare/share/" allowfullscreen ></iframe>
-							</div>
-
 					</div>
 					
+					<div id="sharedView">
+					
+					</div>
+					
+				
 					<!-- -->
 					
                   </div>
@@ -344,9 +312,8 @@
       <script src="../js/all.js"></script>
 	  
       <!-- all plugins -->
-	  <script src="../js/ssvideo.js"></script>
 	  <script type="text/javascript" src="../js/jquery.ui.all.js"></script>
-	  <script type="text/javascript" src="../js/updateDice.js"></script>
+	  <script type="text/javascript" src="../js/ssvideo.js"></script>
 	  <script src="../js/custom.js"></script>
 
 	  <!-- status and magics -->
