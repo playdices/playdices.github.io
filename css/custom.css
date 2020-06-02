@@ -1493,6 +1493,19 @@ body.clinic_version .desc {
 		z-index: 1;
 	}
 	
+	
+	/* No Number Spinner */
+	input.sessionID::-webkit-outer-spin-button,
+	input.sessionID::-webkit-inner-spin-button {
+	  -webkit-appearance: none;
+	  margin: 0;
+	}
+
+	/* Firefox */
+	input.sessionID[type=number] {
+	  -moz-appearance: textfield;
+	}
+	
 /** OTHER CUSTOM CSS STYLES **/
 
 

@@ -185,15 +185,37 @@
 					<div id="sharingView" class="iframe-container backstage">
 					
 						<div class="containerIframe"> 
-						  <iframe id="sharingFrameView" name="sharingFrameView" class="responsive-iframeIframe" scrolling="no" frameborder="0" src="http://playdices.github.io/screenshare/share/"></iframe>
+						  <iframe id="sharingFrameView" name="sharingFrameView" class="responsive-iframeIframe" scrolling="no" frameborder="0" src="http://playdices.github.io/screenshare/share/" allowfullscreen ></iframe>
 						</div>
 						
 					</div>
 					
 					<div id="sharedView" class="iframe-container backstage">
 					
+					<p class="notes">Input Details...</p>
+					
+					<form action="#" onsubmit="viewSession();return false;" autocomplete="on">
+					
+						<div class="form-group paddingFormGroup">
+							  
+							<label>Enter Screen Share ID</label>
+							<input id="ssid" name="ssid" class="form-control sessionID" type="number" placeholder="Screen Share ID" required="">
+						
+									  
+						</div>
+					
+						<div class="form-group paddingFormGroup center">
+							  
+							<button type="submit">Submit</button>
+										  
+						</div>
+					
+					</form>
+					
+					<p class="notes">Iframe shows below...</p>
+					
 							<div class="containerIframe"> 
-							  <iframe id="sharedFrameView" name="sharedFrameView" class="responsive-iframeIframe" scrolling="no" frameborder="0" src="http://playdices.github.io/screenshare/share/"></iframe>
+							  <iframe id="sharedFrameView" name="sharedFrameView" class="responsive-iframeIframe" scrolling="no" frameborder="0" src="http://playdices.github.io/screenshare/share/" allowfullscreen ></iframe>
 							</div>
 
 					</div>

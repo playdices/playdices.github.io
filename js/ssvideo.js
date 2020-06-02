@@ -60,4 +60,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		ShowObjectWithEffect('sharingView', 0, 'fade', 500, 'easeOutExpo');
 		ShowObjectWithEffect('sharedView', 0, 'fade', 500, 'easeOutExpo');return false;
 		
-	}	
+	}
+	
+	function viewSession(){
+		
+		var sessionID = document.getElementsByName('ssid')[0].value;
+		var link = "http://playdices.github.io/screenshare/share/" + "#" + sessionID;
+		//alert(sessionID);
+		
+		document.getElementById('sharedFrameView').src = link;
+		
+		
+		
+	}
+
+	//ONLY NUMBERS ONLY!
+	$(document).on("input", ".sessionID", function() {
+		this.value = this.value.replace(/\D/g,'');
+	});
