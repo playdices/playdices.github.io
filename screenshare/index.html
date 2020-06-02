@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>WebRTC Screen Sharing | Plugin-free</title>
+        <title>Dice - Free to play! (Screen Sharing)</title>
 
         <script>
             if(!location.hash.replace('#', '').length) {
@@ -156,10 +156,10 @@
                         var text = numberOfParticipants + ' users are viewing your screen!';
                         
                         if(numberOfParticipants <= 0) {
-                            text = 'No one is viewing your screen YET.';
+                            text = 'Dice - Free to play! (No one is viewing your screen YET.)';
                         }
                         else if(numberOfParticipants == 1) {
-                            text = 'Only one user is viewing your screen!';
+                            text = 'Dice - Free to play! (Only one user is viewing your screen!)';
                         }
 
                         document.title = text;
@@ -169,25 +169,25 @@
                         var text = '';
 
                         if(state == 'closed' || state == 'disconnected') {
-                            text = 'One of the participants just left.';
+                            text = 'Dice - Free to play! (One of the participants just left.)';
                             document.title = text;
                             showErrorMessage(document.title);
                         }
 
                         if(state == 'failed') {
-                            text = 'Failed to bypass Firewall rules. It seems that target user did not receive your screen. Please ask him reload the page and try again.';
+                            text = ' Dice - Free to play! Failed to bypass Firewall rules. It seems that target user did not receive your screen. Please ask him reload the page and try again.';
                             document.title = text;
                             showErrorMessage(document.title);
                         }
 
                         if(state == 'connected' || state == 'completed') {
-                            text = 'A user successfully received your screen.';
+                            text = 'Dice - Free to play! (A user successfully received your screen.)';
                             document.title = text;
                             showErrorMessage(document.title, 'green');
                         }
 
                         if(state == 'new' || state == 'checking') {
-                            text = 'Someone is trying to join you.';
+                            text = 'Dice - Free to play! (Someone is trying to join you.)';
                             document.title = text;
                             showErrorMessage(document.title, 'green');
                         }
