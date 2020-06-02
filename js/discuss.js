@@ -5,7 +5,7 @@
 
 var disqus_config = function () {
 this.page.url = playdices.github.io;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = playdiceph; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+this.page.identifier = playdicecommunity; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 
 (function() { // DON'T EDIT BELOW THIS LINE
@@ -14,3 +14,4 @@ s.src = 'https://playdice.disqus.com/embed.js';
 s.setAttribute('data-timestamp', +new Date());
 (d.head || d.body).appendChild(s);
 })();
+ 
