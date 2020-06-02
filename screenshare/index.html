@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+   <!-- Basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- Mobile Metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- Site Metas -->
+   <title>Dice - Free to Play!</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- Site Icons -->
+   <link rel="shortcut icon" href="../images/fevicon.ico.png" type="image/x-icon" />
+   <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="../css/bootstrap.min.css">
+   <!-- Site CSS -->
+   <link rel="stylesheet" href="../style.css">
+   <!-- Colors CSS -->
+   <link rel="stylesheet" href="../css/colors.css">
+   <!-- ALL VERSION CSS -->
+   <link rel="stylesheet" href="../css/versions.css">
+   <!-- Responsive CSS -->
+   <link rel="stylesheet" href="../css/responsive.css">
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="../css/custom.css">
+   <!-- Modernizer for Portfolio -->
+   <script src="../js/modernizer.js"></script>
+   
+
+   <!-- [if lt IE 9] -->
+   </head>
+   <body class="clinic_version">
+      <!-- NO LOADER -->
+	  <a id='top'></a>
+      <!-- NO LOADER -->
+	  
+      <header>
+         <div class="header-top wow fadeIn headline">
+            <div class="container">
+               <a class="navbar-brand noselect" ondragstart="return false;"><img src="../images/logo.png" alt="Dice logo"></a>
+               <div class="right-header">
+                  <div class="header-info">
+                     
+                     <div class="info-inner noselect">
+                        <span class="icontop"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <span class="iconcont"><a data-scroll href="#" onclick="emailPortalUser();return false;">jerwinsbest@gmail.com</a></span>	
+                     </div>
+                     <div class="info-inner noselect">
+                        <span class="icontop"><i class="fa fa-youtube-play" aria-hidden="true"></i></span>
+                        <span class="iconcont"><a data-scroll href="http://youtube.com/jerwinsbest?sub_confirmation=1" target="_blank">Jerwin's Best</a></span>	
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="header-bottom wow fadeIn headline">
+            <div class="container">
+               <nav class="main-menu">
+                  <div class="navbar-header">
+                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                  </div>
+				  
+                  <div id="navbar" class="navbar-collapse collapse">
+                     <ul class="nav navbar-nav noselect">
+                        <li><a data-scroll href="index.html">Home</a></li>
+                        <li><a data-scroll href="about.html">About</a></li>
+                        <li><a class="active" href="#">Play</a></li>
+                        <li><a data-scroll href="community.html">Community</a></li>
+                        <li><a data-scroll href="contact.html">Contact</a></li>
+						
+                     </ul>
+                  </div>
+               </nav>
+               <div class="serch-bar">
+
+					<div id="custom-search-input">
+				  
+                     
+						 <div class="input-group col-md-12">
+						  
+						  
+							<form name="DiceSearch_form" id="DiceSearch_form" accept-charset="UTF-8" onsubmit="keyinResults();return false;">
+							<input type="text" id="DiceSearch_keyword" class="form-control input-lg" placeholder="Search" />
+							</form>
+							
+							<span class="input-group-btn">
+							
+							<div id="onSearch">
+								<button id="SearchButton" onclick="keyinResults();searchStatus();return false;" class="btn btn-info btn-lg" type="button">
+
+									<i class="fa fa-search" aria-hidden="true"></i>
+
+								</button>
+							</div>
+							
+							<div id="hideSearch">
+								<button id="hideSearchButton" onclick="searchStatus();return false;" class="btn btn-info btn-lg" type="button">
+
+									<span class="glyphicon glyphicon-remove"></span>
+
+								</button>
+							</div>
+							
+							</span>
+						 </div>	
+
+                    </div>				  
+				  
+				  
+               </div>
+            </div>
+         </div>
+      </header>
+	  
+	  
+<div id="theElement">
+<!-- /////////////////////////////////////////////////////////////////////// -->
+		
+		<div id ="playPadding" style="height:80px"></div>
+		  <div id="playForms" class="section wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+        
+		
+		<div class="container">
+		
+            <div class="heading">
+			
+               <span class="icon-logo"><img class="noselect" ondragstart="return false;" src="../images/icon-logo.png" alt="#"></span>
+               
+			   <h2>Screen Share</h2>
+			   
+            </div>
+            <!-- end title -->
+            
+			<div class="row">
+               <div class="col-md-12">
+                  <div class="message-box">
+                     <h4>Share your screen while playing DICE!</h4>
+                     
+                  </div>
+                  <!-- end messagebox -->
+               </div>
+               <!-- end col -->
+               
+            </div>
+            <!-- end row -->
+            <hr class="hr1">
+			   
+		</div>
+			    
+         </div>
+         <!-- end container -->
+      
+		  
+<!-- /////////////////////////////////////////////////////////////////////// --> 
+</div>
+	
+	 <div id="search" class="section wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+	 <div id ="searchPadding" style="height:80px"></div>
+	 
+         <div class="container">
+            <div class="heading">
+               <span class="icon-logo noselect" ondragstart="return false;"><img src="../images/icon-logo.png" alt="#"></span>
+               <h2>Search</h2>
+            </div>
+            <!-- end title -->
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="message-box">
+					<div id="TheSearchArea"></div>
+                  </div>
+                  <!-- end messagebox -->
+               </div>
+               
+            </div>
+            <!-- end row -->
+            <hr class="hr1">
+			
+         </div>
+         <!-- end container -->
+      </div>
+	 
+	 <div>
+	 
+ 
+	 </div>
+	 
+	 
+      <footer id="footer" class="footer-area wow fadeIn">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="logo padding">
+                     <img class="noselect" ondragstart="return false;" src="../images/logo.png" alt="Dice logo">
+                     <p>Play Dice with your friends! Select various types of daring games depending on the category you selected.</p>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="footer-info padding">
+                     <h3 class="noselect">CONTACT US</h3>
+                     <p><i class="fa fa-map-marker" aria-hidden="true"></i> Metro Manila, Philippines</p>
+                     <p><i class="fa fa-paper-plane" aria-hidden="true"></i> jerwinsbest@gmail.com</p>
+                     <p><i class="fa fa-phone" aria-hidden="true"></i> (+63) 9954651391</p>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="subcriber-info">
+                     <h3 class="noselect">SUBSCRIBE</h3>
+                     <p>If you want to receive newsletter and updates from us. Subscribe to now!</p>
+                     <div class="subcriber-box">
+                        
+                           <div class=" mc-form newsletter-form">
+						 
+						   <form action="#" onsubmit="emailPortal();return false;" autocomplete="on">
+						   
+							  <input name="semail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" type="email" placeholder="Email" required="">
+							  
+                              <button id="mc-submitted" class="mc-submit" type="submit"><i class="fa fa-paper-plane test"></i></button>
+							  
+							</form>  
+							  
+                           </div>
+                        
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <div class="copyright-area wow fadeIn" >
+         <div class="container noselect" ondragstart="return false;">
+            <div class="row">
+               <div class="col-md-8">
+                  <div class="footer-text">
+                     <p>Created by <a id="tw" href="http://youtube.com/jerwinsbest?sub_confirmation=1" target="_blank">Jerwin's Best © 2020</a></p>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="social">
+                     <ul class="social-links">
+                        
+						<li><a href="https://jerwinsbest.weebly.com/" target="_blank"><i class="fa fa-globe"></i></a></li>
+                        <li><a href="https://www.youtube.com/jerwinsbest?sub_confirmation=1" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                        <li><a href="https://www.instagram.com/jerwinsbestPH/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+						<li><a href="https://www.facebook.com/jerwinsbestPH/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+	  
+      <!-- end copyrights -->
+      <a href="#" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+	  
+	  <!-- search js files -->
+	  <script type="text/javascript" src="../js/searchindex.js"></script>
+	  <script type="text/javascript" src="../js/searchfunction.js"></script>
+	  
+      <!-- all js files -->
+      <script src="../js/all.js"></script>
+	  
+      <!-- all plugins -->
+	  <script type="text/javascript" src="../js/jquery.ui.all.js"></script>
+	  <script type="text/javascript" src="../js/updateDice.js"></script>
+	  <script src="../js/custom.js"></script>
+
+	  <!-- status and magics -->
+     
+   </body>
+</html>
