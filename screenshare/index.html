@@ -31,7 +31,6 @@
    <!-- Modernizer for Portfolio -->
    <script src="../js/modernizer.js"></script>
    
-
    <!-- [if lt IE 9] -->
    </head>
    <body>
@@ -122,7 +121,7 @@
 <!-- /////////////////////////////////////////////////////////////////////// -->
 		
 		<div id ="playPadding" style="height:80px"></div>
-		  <div id="playForms" class="section " style="visibility: visible; animation-name: fadeIn;">
+		  <div id="playForms" class="section wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
         
 		
 		<div class="container">
@@ -141,43 +140,66 @@
                   <div class="message-box">
 				  <div class="center">
 				  
-						<h4>Please select an action!</h4>
-                     <!--<h4>Share your screen while playing DICE!</h4> -->
+						<h4 id="shareStatus">Please select an action!</h4>
+              
 					</div>
 				  
-					<div class="menu">
+					<div id="optionIn" class="menu">
 					
-						<div class="optionIn">
 						  <div class="form">
+						  
 							<div class="form-group">
 								<div class="center">
-								  <button type="button">Share</button>
-								   <div>
-									 &nbsp&nbsp&nbsp
-								   </div>
-								  <button type="button">View</button>
+								
+								  <div id="optionInA" class="paddingRopt">
+									<button type="button" onclick="shareScreen();return false;">Share</button>
+								  </div> 
+								   
+								   <div id="optionInB" class="paddingLopt">
+									<button type="button" onclick="viewScreen();return false;">View</button>
+								   </div> 
+								  
 								</div>
 							</div>  
 						 </div>
-						</div>
 						
-						<div class="optionBack">
-						  <div class="form">
+					</div>
+					
+					<div id="optionBack" class="menu backstage">
+						<div class="form">
+							  
 							<div class="form-group">
 								<div class="center">
-								  <button type="button">Back</button>
+									
+									<button type="button" onclick="backScreen();return false;">Back</button>
+									
 								</div>
 							</div>  
-						 </div>
+						</div>
+					</div>
+					
+					<p class="notes">Iframe shows below...</p>
+					
+					<!-- -->
+					
+					<div id="sharingView" class="iframe-container backstage">
+					
+						<div class="containerIframe"> 
+						  <iframe id="sharingFrameView" name="sharingFrameView" class="responsive-iframeIframe" scrolling="no" frameborder="0" src="http://playdices.github.io/screenshare/share/"></iframe>
 						</div>
 						
 					</div>
+					
+					<div id="sharedView" class="iframe-container backstage">
+					
+							<div class="containerIframe"> 
+							  <iframe id="sharedFrameView" name="sharedFrameView" class="responsive-iframeIframe" scrolling="no" frameborder="0" src="http://playdices.github.io/screenshare/share/"></iframe>
+							</div>
 
-					<div class="">
 					</div>
-					  
-					  
-					  
+					
+					<!-- -->
+					
                   </div>
                   <!-- end messagebox -->
                </div>
@@ -196,7 +218,7 @@
 <!-- /////////////////////////////////////////////////////////////////////// --> 
 </div>
 	
-	 <div id="search" class="section " style="visibility: visible; animation-name: fadeIn;">
+	 <div id="search" class="section wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
 	 <div id ="searchPadding" style="height:80px"></div>
 	 
          <div class="container">
@@ -221,12 +243,7 @@
          <!-- end container -->
       </div>
 	 
-	 <div>
-	 
- 
-	 </div>
-	 
-	 
+
       <footer id="footer" class="footer-area ">
          <div class="container">
             <div class="row">
@@ -305,6 +322,7 @@
       <script src="../js/all.js"></script>
 	  
       <!-- all plugins -->
+	  <script src="../js/ssvideo.js"></script>
 	  <script type="text/javascript" src="../js/jquery.ui.all.js"></script>
 	  <script type="text/javascript" src="../js/updateDice.js"></script>
 	  <script src="../js/custom.js"></script>
