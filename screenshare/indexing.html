@@ -1,18 +1,85 @@
+
+<!-- Demo version: 2019.04.08 -->
+
+<!--
+> Muaz Khan     - https://github.com/muaz-khan
+> MIT License   - https://www.webrtc-experiment.com/licence/
+> Documentation - https://github.com/muaz-khan/WebRTC-Experiment/tree/master/Pluginfree-Screen-Sharing
+-->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Dice - Free to play! (Screen Sharing)</title>
+        <title>WebRTC Screen Sharing | Plugin-free</title>
 
-        <script src="../js/scvideo.js"></script> <!-- GET -->
+        <script>
+            if(!location.hash.replace('#', '').length) {
+                location.href = location.href.split('#')[0] + '#' + (Math.random() * 100).toString().replace('.', '');
+                location.reload();
+            }
+        </script>
 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <link rel="author" type="text/html" href="https://plus.google.com/+MuazKhan">
+        <meta name="author" content="Muaz Khan">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
+        <link rel="stylesheet" href="https://www.webrtc-experiment.com/style.css">
 
-        <link rel="stylesheet" href="../css/scvideo.css"> <!-- GET -->
+        <style>
+            video {
+                -moz-transition: all 1s ease;
+                -ms-transition: all 1s ease;
 
+                -o-transition: all 1s ease;
+                -webkit-transition: all 1s ease;
+                transition: all 1s ease;
+                vertical-align: top;
+                width: 100%;
+            }
+
+            input {
+                border: 1px solid #d9d9d9;
+                border-radius: 1px;
+                font-size: 2em;
+                margin: .2em;
+                width: 30%;
+            }
+
+            select {
+                border: 1px solid #d9d9d9;
+                border-radius: 1px;
+                height: 50px;
+                margin-left: 1em;
+                margin-right: -12px;
+                padding: 1.1em;
+                vertical-align: 6px;
+                width: 18%;
+            }
+
+            .setup {
+                border-bottom-left-radius: 0;
+                border-top-left-radius: 0;
+                font-size: 1.5em;
+                margin-bottom: 20px;
+                margin-top: 20px;
+                border-radius: 5px;
+            }
+
+            p { padding: 1em; }
+
+            li {
+                border-bottom: 1px solid rgb(189, 189, 189);
+                border-left: 1px solid rgb(189, 189, 189);
+                padding: .5em;
+            }
+        </style>
+        <script>
+            document.createElement('article');
+            document.createElement('footer');
+        </script>
 
         <!-- scripts used for screen-sharing -->
         <script src="https://www.webrtc-experiment.com/socket.io.js"> </script>
@@ -22,14 +89,37 @@
         <script src="https://www.webrtc-experiment.com/BandwidthHandler.js"></script>
         <script src="https://www.webrtc-experiment.com/IceServersHandler.js"></script>
         <script src="https://www.webrtc-experiment.com/Pluginfree-Screen-Sharing/conference.js"> </script>
-		<!-- scripts used for screen-sharing -->
-		
-		
     </head>
 
     <body>
         <article>
-            
+            <header style="text-align: center;">
+                <h1>
+                    WebRTC Screen Sharing | Plugin-free
+                </h1>
+                <p>
+                    <a href="https://www.webrtc-experiment.com/">HOME</a>
+                    <span> &copy; </span>
+                    <a href="https://MuazKhan.com/" target="_blank">Muaz Khan</a>
+
+                    .
+                    <a href="http://twitter.com/WebRTCWeb" target="_blank" title="Twitter profile for WebRTC Experiments">@WebRTCWeb</a>
+
+                    .
+                    <a href="https://github.com/muaz-khan?tab=repositories" target="_blank" title="Github Profile">Github</a>
+
+                    .
+                    <a href="https://github.com/muaz-khan/WebRTC-Experiment/issues?state=open" target="_blank">Latest issues</a>
+
+                    .
+                    <a href="https://github.com/muaz-khan/WebRTC-Experiment/commits/master" target="_blank">What's New?</a>
+                </p>
+            </header>
+
+            <div class="github-stargazers"></div>
+
+            <h2 style="display: block;text-align: center;border:0;margin-bottom:0;">High Quality screen sharing application using <a href="https://www.webrtc-experiment.com/">WebRTC</a>!</h2>
+
             <section id="logs-message" class="experiment" style="display: none;text-align: center;font-size: 1.5em;line-height: 2;color: red;">WebRTC getDisplayMedia API.</section>
 
             <!-- just copy this <section> and next script -->
@@ -101,10 +191,10 @@
                         var text = numberOfParticipants + ' users are viewing your screen!';
                         
                         if(numberOfParticipants <= 0) {
-                            text = 'Dice - Free to play! (No one is viewing your screen YET.)';
+                            text = 'No one is viewing your screen YET.';
                         }
                         else if(numberOfParticipants == 1) {
-                            text = 'Dice - Free to play! (Only one user is viewing your screen!)';
+                            text = 'Only one user is viewing your screen!';
                         }
 
                         document.title = text;
@@ -114,25 +204,25 @@
                         var text = '';
 
                         if(state == 'closed' || state == 'disconnected') {
-                            text = 'Dice - Free to play! (One of the participants just left.)';
+                            text = 'One of the participants just left.';
                             document.title = text;
                             showErrorMessage(document.title);
                         }
 
                         if(state == 'failed') {
-                            text = ' Dice - Free to play! Failed to bypass Firewall rules. It seems that target user did not receive your screen. Please ask him reload the page and try again.';
+                            text = 'Failed to bypass Firewall rules. It seems that target user did not receive your screen. Please ask him reload the page and try again.';
                             document.title = text;
                             showErrorMessage(document.title);
                         }
 
                         if(state == 'connected' || state == 'completed') {
-                            text = 'Dice - Free to play! (A user successfully received your screen.)';
+                            text = 'A user successfully received your screen.';
                             document.title = text;
                             showErrorMessage(document.title, 'green');
                         }
 
                         if(state == 'new' || state == 'checking') {
-                            text = 'Dice - Free to play! (Someone is trying to join you.)';
+                            text = 'Someone is trying to join you.';
                             document.title = text;
                             showErrorMessage(document.title, 'green');
                         }
@@ -243,14 +333,12 @@
                     this.disabled = true;
                 };
 
-
                 function rotateVideo(video) {
                     video.style[navigator.mozGetUserMedia ? 'transform' : '-webkit-transform'] = 'rotate(0deg)';
                     setTimeout(function() {
                         video.style[navigator.mozGetUserMedia ? 'transform' : '-webkit-transform'] = 'rotate(360deg)';
                     }, 1000);
                 }
-
 
                 function showPrivateLink() {
                     var uniqueToken = document.getElementById('unique-token');
@@ -260,13 +348,37 @@
 
             </script>
 
-            
+            <section class="experiment">
+                <h2 id="advantages">
+                    <a href="#advantages">Advantages</a>
+                </h2>
+                <ol>
+                    <li>As of 2019, this demo is now 100% Plugin-free!! Believe that! No Chrome extension! No Firefox addon!</li>
+                    <li>Share screen from Chrome, Firefox or Edge. Safari support is coming soon.</li>
+                    <li>
+                        You can open private i.e. secure rooms:<br /><br />
+                        <ol>
+                            <li>Use hashes to open private rooms: <strong>#private-room</strong></li>
+                            <li>Use URL parameters to open private rooms: <strong>?private=room</strong></li>
+                        </ol>
+                    </li>
+                    <li>Upto 10 people can view your screen. System restrictions (CPU/RAM) still applies.</li>
+                </ol>
+            </section>
+
+            <section class="experiment"><small id="send-message"></small></section>
 
         </article>
 
-        
+        <a href="https://github.com/muaz-khan/WebRTC-Experiment/tree/master/Pluginfree-Screen-Sharing" class="fork-left"></a>
 
-    
+        <footer>
+            <p>
+                <a href="https://www.webrtc-experiment.com/">WebRTC Experiments</a>
+                © <a href="https://plus.google.com/+MuazKhan" rel="author" target="_blank">Muaz Khan</a>
+                <a href="mailto:muazkh@gmail.com" target="_blank">muazkh@gmail.com</a>
+            </p>
+        </footer>
 
         <!-- commits.js is useless for you! -->
         <script src="https://www.webrtc-experiment.com/commits.js" async> </script>
