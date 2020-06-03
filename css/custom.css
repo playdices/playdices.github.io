@@ -301,7 +301,7 @@ header {
     letter-spacing: -1px;
     font-weight: 400;
 }
-body.clinic_version .first-section h2 {
+body.transformed_version .first-section h2 {
     color: #1f1f1f;
     text-transform: capitalize;
     font-size: 40px;
@@ -432,7 +432,7 @@ body.clinic_version .first-section h2 {
     display: block;
     margin: 10px auto 0;
 }
-body.clinic_version .first-section {
+body.transformed_version .first-section {
    padding: 1em 0;
 }
 .message-box .lead {
@@ -443,7 +443,7 @@ body.clinic_version .first-section {
     padding-bottom: 0;
     font-weight: 400;
 }
-body.clinic_version .section {
+body.transformed_version .section {
     padding: 90px 0;
     float: left;
     width: 100%;
@@ -596,7 +596,7 @@ hr.hr1 {
 .form-group button:hover,.form-group button:focus {
     background: linear-gradient(to right, #39b49a 0%, #4ff193 100%);
 }
-body.clinic_version .dev-list .widget h3 {
+body.transformed_version .dev-list .widget h3 {
     display: inline-block;
     font-size: 20px;
     line-height: 1 !important;
@@ -605,7 +605,7 @@ body.clinic_version .dev-list .widget h3 {
     position: relative;
     top: -25px;
 }
-body.clinic_version .dev-list .widget small {
+body.transformed_version .dev-list .widget small {
     display: block;
     margin: -15px 0 -5px;
     font-size: 16px;
@@ -625,7 +625,7 @@ body.clinic_version .dev-list .widget small {
     position: relative;
     z-index: 1;
 }
-body.clinic_version .tab-pane p {
+body.transformed_version .tab-pane p {
     margin-bottom: 0;
     padding-top: 0;
 }
@@ -720,7 +720,7 @@ body.clinic_version .tab-pane p {
     position: relative;
     z-index: 1;
 }
-body.clinic_version .footer {
+body.transformed_version .footer {
     background-color: #15191c;
 }
 .footer .widget-title img {
@@ -729,7 +729,7 @@ body.clinic_version .footer {
 .footer .widget-title small {
     padding: 0;
 }
-body.clinic_version .footer .widget-title h3 {
+body.transformed_version .footer .widget-title h3 {
     color: #fff;
 }
 .contact-section {
@@ -1238,7 +1238,7 @@ header {
     font-size: 23px;
     font-weight: 400;
 }
-body.clinic_version .desc {
+body.transformed_version .desc {
     position: relative;
     background: #fff;
     border: 1px solid #ededed;
