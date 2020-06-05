@@ -1408,6 +1408,10 @@ body.transformed_version .desc {
 	.inlined{
 		display: inline;
 	}
+	
+	.turtle{
+		visibility: hidden;
+	}
 
 	.googleForm{
 		background-color #FFFFFF;
