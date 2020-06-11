@@ -1419,7 +1419,13 @@ body.transformed_version .desc {
 	}
 	
 	.flashy{
-		font-size: 300%;
+		font-size: 350%;
+		font-weight: bold;
+		text-align: center;
+	}
+	
+	.flashysub{
+		font-size: 250%;
 		font-weight: bold;
 		text-align: center;
 	}
