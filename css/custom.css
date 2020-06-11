@@ -456,6 +456,7 @@ body.transformed_version .section {
     color: #ffffff;
     padding: 12px 0 12px;
     margin: 0;
+	margin-bottom: 15px;
     background: #106247;
     text-align: center;
 }
@@ -1433,6 +1434,16 @@ body.transformed_version .desc {
 	.flashysub{
 		font-size: 250%;
 		font-weight: bold;
+		text-align: center;
+	}
+	
+	.spacingSub{
+		margin-bottom: 45px;
+	}
+	
+	.flashyt{
+		font-size: 200%;
+		color: #106247;
 		text-align: center;
 	}
 	
