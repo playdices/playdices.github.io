@@ -1418,6 +1418,18 @@ body.transformed_version .desc {
 		background-image: linear-gradient(315deg, #F2F2F2 0%, #FFFFFF 50%);
 	}
 	
+	.flashy{
+		font-size: 300%;
+		font-weight: bold;
+		text-align: center;
+	}
+	
+	.subtitled{
+		
+		color: black;
+		text-align: center;
+	}
+	
 	.newLine{
 		display: block;
 	}
