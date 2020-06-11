@@ -1418,6 +1418,12 @@ body.transformed_version .desc {
 		background-image: linear-gradient(315deg, #F2F2F2 0%, #FFFFFF 50%);
 	}
 	
+	.flashyg{
+		font-size: 300%;
+		font-weight: bold;
+		text-align: center;
+	}
+	
 	.flashy{
 		font-size: 350%;
 		font-weight: bold;
