@@ -2,11 +2,19 @@
 <html>
 <body>
 
- <iframe src="https://olafwempe.com/mp3/silence/silence.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-		<audio autoplay>
-		<source src="https://playdices.github.io/audio/jieintro.mp3" type="audio/mp3">
-		</audio>
-	  
+<audio autoplay id="myautoload">
+<source src="https://www.w3schools.com/tags/horse.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
 
+<script type="text/javascript">
+    var myadido = document.getElementById("myautoload");
+
+    setTimeout(function() {
+    myadido.play();
+
+    },500);
+</script>
 </body>
 </html>
+share  edit  follow 
