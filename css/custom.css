@@ -1533,6 +1533,8 @@ nav.main-menu .navbar-toggle {border: solid #fff 2px;}
 #googleMap {height: 540px !important;}
 .footer-info h3, .subcriber-info h3 {float: left;width: 100%;}
 .footer-info p {float: left;width: 100%;}
+.playDesktop{ display: none; }
+
 	
 }
 
