@@ -1512,7 +1512,9 @@ body.transformed_version .desc {
 	}
 	
 /** OTHER CUSTOM CSS STYLES **/
-
+@media (min-width:100px) and (max-width:991px){
+.playDesktop{ display: none; }
+}
 
 @media (min-width:768px) and (max-width:991px) {
 
@@ -1533,9 +1535,7 @@ nav.main-menu .navbar-toggle {border: solid #fff 2px;}
 #googleMap {height: 540px !important;}
 .footer-info h3, .subcriber-info h3 {float: left;width: 100%;}
 .footer-info p {float: left;width: 100%;}
-.playDesktop{ display: none; }
 
-	
 }
 
 
