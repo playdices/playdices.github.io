@@ -1497,6 +1497,20 @@ body.transformed_version .desc {
 		z-index: 1;
 	}
 	
+	.divideI{
+		margin-left: 40px;
+		margin-right: 40px;
+	}
+	
+	.divideP{
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+	
+	.tabed{
+		margin-left: 46px;
+	}
+	
 /** OTHER CUSTOM CSS STYLES **/
 
 
