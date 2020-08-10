@@ -27,7 +27,7 @@ function initializeOS(){
    setTimeout(function(){ 
 		startIntroDICE(); 
 		userPortal();
-   }, 10000);
+   }, 12000);
    
 }
 
