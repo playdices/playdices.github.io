@@ -144,7 +144,8 @@
 
 									<div class="form-group paddingFormGroup center">
 									  
-										  <img class="noselect imgchange" ondragstart="return false;" id="displayPhoto" src="https://playdices.github.io/images/profile.png" title="Select an image!" alt="Select an image!" onclick="imageSelect();return false;" style="border-radius:50%"/>
+									  <a href="#" onclick="imageSelect();return false;">
+										  <img class="noselect" ondragstart="return false;" id="displayPhoto" src="https://playdices.github.io/images/profile.png" title="Select an image!" alt="Select an image!"  style="border-radius:50%"/></a>
 										  <input class="hidden" type="file" id="userPhoto" accept="image/*" onchange="onCheckImage();onImageSelected(event); return false;" />
 									  
 									</div>
@@ -164,65 +165,13 @@
 										
 									</div>
 									
-									
-								
-									
 									<div class="form-group paddingFormGroup">
                                        <div class="center"><button type="submit">Login</button></div>
                                     </div>
 									
 				</form>
-				<script>
-				function imageSelect(){
-					var getPhoto = document.getElementById("userPhoto");
-					getPhoto.click();
-				}
-				
-				function onImageSelected(event) {
-				  var selectedFile = event.target.files[0];
-				  
-				  var reader = new FileReader();
-
-				  var imgtag = document.getElementById("displayPhoto");
-				  
-				  var fileName = document.getElementById('userPhoto').value.toLowerCase();
-				  if(!fileName.endsWith('.jpg') && !fileName.endsWith('.png') && !fileName.endsWith('.gif') && !fileName.endsWith('.svg')){
-						imgtag.title = "Select an image!";
-						document.getElementById("displayPhoto").src = "https://playdices.github.io/images/profile.png";
-						return false;
-				  }
-				  else
-				  {
-						imgtag.title = selectedFile.name;
-				  }
-				  
-				  document.getElementById("displayPhoto").width = "250";
-				  document.getElementById("displayPhoto").height = "250";
-				  
-				  reader.onload = function(event) {
-					imgtag.src = event.target.result;
-					
-				  };
-
-				  reader.readAsDataURL(selectedFile);
-				  
-				  
-				  
-				}
-				function onCheckImage(){
-					var fileName = document.getElementById('userPhoto').value.toLowerCase();
-					
-					if(document.getElementById("userPhoto").value == ""){
-						document.getElementById("displayPhoto").src = "https://playdices.github.io/images/profile.png";
-					}
-				}
-				</script>
-				
 				  <!-- -->
-				  
-				
-				  
-				  
+
 				  </div>
                   <!-- end messagebox -->
                </div>
