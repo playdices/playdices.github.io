@@ -144,7 +144,7 @@
 
 									<div class="form-group paddingFormGroup center">
 									
-									  <img id="displayPhoto" src="https://playdices.github.io/images/profile.png" title="Select an image!" alt="Select an image!" onclick="imageSelect();return false;" style="border-radius:50%"/>
+									  <img class="noselect pointer" ondragstart="return false;" id="displayPhoto" src="https://playdices.github.io/images/profile.png" title="Select an image!" alt="Select an image!" onclick="imageSelect();return false;" style="border-radius:50%"/>
 									  <input class="hidden" type="file" id="userPhoto" accept="image/*" onchange="onCheckImage();onImageSelected(event); return false;" />
 									  
 									</div>

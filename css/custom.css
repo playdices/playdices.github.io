@@ -1511,6 +1511,12 @@ body.transformed_version .desc {
 		margin-left: 46px;
 	}
 	
+	.pointer {
+		
+		cursor: pointer;
+		
+	}
+	
 /** OTHER CUSTOM CSS STYLES **/
 @media (min-width:100px) and (max-width:991px){
 .playDesktop{ display: none; }
