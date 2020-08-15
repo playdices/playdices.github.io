@@ -41,4 +41,20 @@ function onCheckImage(){
 	}
 }
 
+function chainCheckbox(){
+	var chain = sessionStorage.getItem("checkChain");
+	
+	if(chain === "true"){
+		document.getElementById("saveDetails").checked = true;
+		sessionStorage.setItem("checkChain", "false");
+	}
+	else if(chain === "false"){
+		document.getElementById("saveDetails").checked = false;
+		sessionStorage.setItem("checkChain", "true");
+	}
+	else{
+		sessionStorage.setItem("checkChain", "true");
+		document.getElementById("saveDetails").checked = true;
+	}
 
+}
