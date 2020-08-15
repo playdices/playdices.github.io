@@ -144,23 +144,23 @@
 
 									<div class="form-group paddingFormGroup center">
 									  
-									  <a href="#" onclick="imageSelect();return false;">
+									  <a id="checkOn" href="#" onclick="imageSelect();return false;">
 										  <img class="noselect" ondragstart="return false;" id="displayPhoto" src="https://playdices.github.io/images/profile.png" title="Select an image!" alt="Select an image!"  style="border-radius:50%"/></a>
-										  <input class="hidden" type="file" id="userPhoto" accept="image/*" onchange="onCheckImage();onImageSelected(event); return false;" />
+										  <input class="hidden" type="file" id="userPhoto" accept="image/*" onchange="onCheckImage();onImageSelected(event);onChangePicDetails(); return false;" />
 									  
 									</div>
 									
 									<div class="form-group paddingFormGroup">
 						  
 									  <label>Username</label>
-									  <input id="username" name="formUserName" class="form-control" type="text" placeholder="Username" required="">
+									  <input id="username" name="formUserName" class="form-control" type="text" onkeydown="onChangeNameDetails();" placeholder="Username" required="">
 									  
 									</div>
 									
 									<div class="form-check center paddingFormGroup noselect">
 									
 										<br>
-										<input id="saveDetails" type="checkbox" class="form-check-input" style="cursor: pointer;">
+										<input id="saveDetails" type="checkbox" class="form-check-input" style="cursor: pointer;" onchange="setLoginStatus();return false;">
 										<label class="form-check-label"><a href="#" onclick="chainCheckbox();return false;">&nbsp;&nbsp;Save Login Details</a></label>
 										
 									</div>
