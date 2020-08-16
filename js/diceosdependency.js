@@ -18,7 +18,15 @@ window.addEventListener('resize', function(){
 });
 
 
-
+document.addEventListener("DOMContentLoaded", function loadDetails(){
+    
+    setTimeout(function vidTime(){ 
+	
+		initializeOS();
+		
+	}, 60);
+	
+});
 
 //LOAD DICE OS
 function initializeOS(){
