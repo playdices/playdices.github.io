@@ -20,6 +20,12 @@ window.addEventListener('resize', function(){
 });
 
 
+document.addEventListener("DOMContentLoaded", function loadDetails(){
+    
+	document.getElementById("bgDICE").style.display = "none";
+
+	
+});
 
 
 //LOAD DICE OS
@@ -49,6 +55,7 @@ function startIntroJIE() {
 //USER PORTAL
 function userPortal(){
 	ShowObjectWithEffect('userPane', 1, 'fade', 500, 'easeOutExpo');
+	ShowObjectWithEffect('bgDICE', 1, 'fade', 500, 'easeOutExpo');
 	document.getElementById("introLoad").style.display = "none";
 	return false;
 	
