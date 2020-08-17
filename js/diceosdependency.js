@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function loadDetails(){
 function initializeOS(){
    
    startIntroJIE();
-   setTimeout(function(){ 
+   setTimeout(function roleIntro(){ 
 		startIntroDICE(); 
 		userPortal();
    }, 10250);
@@ -42,7 +42,11 @@ function initializeOS(){
 //PLAY START MENU SOUND
 var introDICE = document.getElementById("introDICE"); 
 function startIntroDICE() { 
-  introDICE.play(); 
+  introDICE.play();
+  
+  setTimeout(function hidePane(){ 
+		ShowObjectWithEffect('userPane', 0, 'fade', 500, 'easeOutExpo');
+   }, 4000);
   
 } 
 
