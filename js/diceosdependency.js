@@ -7,6 +7,7 @@ $('.static').bind('contextmenu', function(e) {
 //EXIT DICE OS IF BROWSER IS NOT FULLSCREEN
 window.addEventListener('resize', function(){
 	
+	/*
 	if( window.innerHeight == screen.height) {
 		//it's fullscreen!
 	}
@@ -14,6 +15,7 @@ window.addEventListener('resize', function(){
 		//not fullscreen!
 		window.location.href='https://playdices.github.io/play.html'; 
 	}
+	*/
 	
 });
 
