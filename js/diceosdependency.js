@@ -23,7 +23,6 @@ window.addEventListener('resize', function(){
 document.addEventListener("DOMContentLoaded", function loadDetails(){
     
 	document.getElementById("bgDICE").style.display = "none";
-
 	
 });
 
@@ -46,9 +45,14 @@ function startIntroDICE() {
   
   setTimeout(function hidePane(){ 
 		ShowObjectWithEffect('userPane', 0, 'fade', 500, 'easeOutExpo');
+		loadStartMenu();
    }, 4000);
   
-} 
+}
+
+function loadStartMenu(){
+	ShowObjectWithEffect('userHeader', 1, 'fade', 500, 'easeOutExpo');
+}
 
 //PLAY JIE INTRO
 var introJIE = document.getElementById("introJIE"); 
