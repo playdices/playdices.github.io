@@ -23,6 +23,7 @@ window.addEventListener('resize', function(){
 document.addEventListener("DOMContentLoaded", function loadDetails(){
     
 	document.getElementById("bgDICE").style.display = "none";
+	document.getElementById("disconnected").style.display = "none";
 	
 });
 
@@ -31,10 +32,12 @@ document.addEventListener("DOMContentLoaded", function loadDetails(){
 function initializeOS(){
    
    startIntroJIE();
-   setTimeout(function roleIntro(){ 
-		startIntroDICE(); 
+   
+   document.getElementById("introJIE").addEventListener('ended',myHandler,false);
+    function myHandler(e) {
+        startIntroDICE(); 
 		userPortal();
-   }, 10250);
+    }
    
 }
 
@@ -57,7 +60,10 @@ function loadStartMenu(){
 //PLAY JIE INTRO
 var introJIE = document.getElementById("introJIE"); 
 function startIntroJIE() { 
-  introJIE.play(); 
+  introJIE.play();
+
+
+  
 }
 
 //USER PORTAL
