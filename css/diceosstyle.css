@@ -172,21 +172,26 @@ overflow: hidden;
    float:right;
 }
 
+.headeredstat .rightie{
+  
+   float:right;
+}
+
 .profiledpx{
 	width:auto;
-	height: 2.0em;
+	height: 1.5em;
 	border-radius:50%;
 	vertical-align:middle;
 }
 
 .connectsty{
 	width:auto;
-	height: 2.0em;
+	height: 1.5em;
 	vertical-align:middle;
 }
 
 .headered{
 	
 	color: white;
-	font-size: 30px;
+	font-size: 45px;
 }
