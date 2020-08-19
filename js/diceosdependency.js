@@ -22,14 +22,9 @@ window.addEventListener('resize', function(){
 
 document.addEventListener("DOMContentLoaded", function loadDetails(){
     
+	document.getElementById("playIntroButton").setAttribute("class", "pointerPlay");
 	document.getElementById("bgDICE").style.display = "none";
-	document.getElementById("disconnected").style.display = "none";
-	
-	var s = document.createElement("script");
-	s.type = "text/javascript";
-	s.src = "D:\dice\playdices.github.io\js\slider.js";
-	$("head").append(s);
-	
+
 });
 
 
@@ -59,8 +54,18 @@ function startIntroDICE() {
 }
 
 function loadStartMenu(){
+	
+	$('head').append('<link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css">');
+	$('head').append('<script src="https://cdn.metroui.org.ua/v4.3.2/js/metro.min.js"></script>');
+	$('head').append('<script type="text/javascript" src="http://playdices.github.io/js/slider.js"></script>');
+	
 	ShowObjectWithEffect('userHeader', 1, 'fade', 500, 'easeOutExpo');
 	ShowObjectWithEffect('logoPlaceholder', 1, 'fade', 500, 'easeOutExpo');
+	
+	setTimeout(function showItems(){ 
+		ShowObjectWithEffect('items', 1, 'fade', 500, 'easeOutExpo');
+   }, 1000);
+	
 	
 }
 
@@ -78,7 +83,6 @@ function userPortal(){
 	ShowObjectWithEffect('userPane', 1, 'fade', 500, 'easeOutExpo');
 	ShowObjectWithEffect('bgDICE', 1, 'fade', 500, 'easeOutExpo');
 	document.getElementById("introLoad").style.display = "none";
-	return false;
 	
 }
 

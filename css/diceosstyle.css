@@ -111,10 +111,17 @@ overflow: hidden;
 	  
 	}
 
-	video {
+	#introJIE {
 	  width: 100%;
 	  height: auto;
 	}
+	
+	#backDrop {
+	  width: auto;
+	  height: 100%;
+	}
+	
+	.pointerPlay {cursor: pointer;}
 	
 	
 	
@@ -125,7 +132,7 @@ overflow: hidden;
 	.bsection {
 	  position: relative;
 	  width: 100%;
-	  height: 100vh;
+	  height: auto;
 	  display: flex;
 	  align-items: center;
 	  justify-content: center;
@@ -157,7 +164,7 @@ overflow: hidden;
 	  left: 0;
 	  background-color: lightblue;
 	  width: 100%;
-	  height: 100vh;
+	  height: auto;
 	  opacity: 0.1;
 	  
 	}
