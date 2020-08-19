@@ -21,7 +21,7 @@ window.addEventListener('resize', function(){
 
 
 document.addEventListener("DOMContentLoaded", function loadDetails(){
-    
+	
 	document.getElementById("playIntroButton").setAttribute("class", "pointerPlay");
 	document.getElementById("bgDICE").style.display = "none";
 
@@ -55,18 +55,27 @@ function startIntroDICE() {
 
 function loadStartMenu(){
 	
-	$('head').append('<link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css">');
-	$('head').append('<script src="https://cdn.metroui.org.ua/v4.3.2/js/metro.min.js"></script>');
-	$('head').append('<script type="text/javascript" src="http://playdices.github.io/js/slider.js"></script>');
+	metroStyle();
+	onSlider();
 	
 	ShowObjectWithEffect('userHeader', 1, 'fade', 500, 'easeOutExpo');
 	ShowObjectWithEffect('logoPlaceholder', 1, 'fade', 500, 'easeOutExpo');
 	
 	setTimeout(function showItems(){ 
-		ShowObjectWithEffect('items', 1, 'fade', 500, 'easeOutExpo');
+		ShowObjectWithEffect('maxMenu', 1, 'fade', 500, 'easeOutExpo');
    }, 1000);
 	
 	
+}
+
+function metroStyle(){
+	$('head').append('<link href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css" rel="stylesheet">');
+	$('head').append('<script src="https://playdices.github.io/metro/metro/js/metro.js"></script>');
+
+}
+
+function onSlider(){
+	$('head').append('<script type="text/javascript" src="http://playdices.github.io/js/slider.js"></script>');
 }
 
 //PLAY JIE INTRO
