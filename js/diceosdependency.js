@@ -25,6 +25,11 @@ document.addEventListener("DOMContentLoaded", function loadDetails(){
 	document.getElementById("bgDICE").style.display = "none";
 	document.getElementById("disconnected").style.display = "none";
 	
+	var s = document.createElement("script");
+	s.type = "text/javascript";
+	s.src = "D:\dice\playdices.github.io\js\slider.js";
+	$("head").append(s);
+	
 });
 
 
@@ -55,6 +60,8 @@ function startIntroDICE() {
 
 function loadStartMenu(){
 	ShowObjectWithEffect('userHeader', 1, 'fade', 500, 'easeOutExpo');
+	ShowObjectWithEffect('logoPlaceholder', 1, 'fade', 500, 'easeOutExpo');
+	
 }
 
 //PLAY JIE INTRO

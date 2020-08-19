@@ -71,7 +71,7 @@ p {
 .welcomeDisplay{
 	
 	font-size: 30px;
-	padding-left: 55px;
+	padding-left: 15px;
 	
 }
 
@@ -177,6 +177,11 @@ overflow: hidden;
    float:right;
 }
 
+.logofx{
+	width:auto;
+	height: 4.5em;
+}
+
 .profiledpx{
 	width:auto;
 	height: 1.5em;
@@ -187,6 +192,12 @@ overflow: hidden;
 .connectsty{
 	width:auto;
 	height: 1.5em;
+	vertical-align:middle;
+}
+
+.preloaderfx{
+	width:auto;
+	height: 3.5em;
 	vertical-align:middle;
 }
 
