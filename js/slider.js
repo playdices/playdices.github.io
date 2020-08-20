@@ -8,10 +8,9 @@ $(document).ready(function() {
 });
 
 var clicked = false, clickX;
-var dialogIO = localStorage['checkDialog'];
-
 
 $(document).on({
+	var dialogIO = localStorage['checkDialog'];
 	if(dialogIO == "open")
 		'mousemove': function(e) {
 			clicked && updateScrollPos(e);
