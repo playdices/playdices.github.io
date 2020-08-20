@@ -134,7 +134,7 @@ function openDialog(dialogType){
    
    if(dialogType === 1){
 		addTitle = "About DICE webOS";
-		addContent = "<div>Jerwin's Best DICE webOS<br />Version 1023 (webOS Build, powered by JavaScript)<br />Created by Jerwin's Best Interactive Entertainment<br />Creative Commons Attribution (2020 edition)<br /><br />This web operating system is dedicated to:<br /><span id=user>User</span></div>";
+		addContent = "<div>Jerwin's Best DICE webOS<br />Version 1023 (webOS Build, powered by JavaScript)<br />Created by Jerwin's Best Interactive Entertainment<br />Creative Commons Attribution (2020 release)<br /><br />This web operating system is dedicated to:<br /><span id=user>User</span></div>";
    }
    else if(dialogType === 2){
 		addTitle = "Help";
