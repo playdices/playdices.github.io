@@ -1,12 +1,25 @@
-var curYPos = 0,
-    curXPos = 0,
-    curDown = false;
+var clicked = false, base = 0;
 
-window.addEventListener('mousemove', function(e){ 
-  if(curDown === true){
-    window.scrollTo(document.body.scrollLeft + (curXPos - e.pageX), document.body.scrollTop + (curYPos - e.pageY));
-  }
+$('#someDiv').on({
+    mousemove: function(e) {
+        clicked && function(xAxis) {
+            var _this = $(this);
+            if(base > xAxis) {
+                base = xAxis;
+                _this.css('margin-left', '-=1px');
+            }
+            if(base < xAxis) {
+                base = xAxis;
+                _this.css('margin-left', '+=1px');
+            }
+        }.call($(this), e.pageX);
+    },
+    mousedown: function(e) {
+        clicked = true;
+        base = e.pageX;
+    },
+    mouseup: function(e) {
+        clicked = false;
+        base = 0;
+    }
 });
-
-window.addEventListener('mousedown', function(e){ curDown = true; curYPos = e.pageY; curXPos = e.pageX; });
-window.addEventListener('mouseup', function(e){ curDown = false; }); 
