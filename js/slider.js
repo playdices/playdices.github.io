@@ -1,36 +1,20 @@
-
-
-
-
-var clicked = false, base = 0;
-
-$('#maxMenu').on({
-	
-	if(sessionStorage.getItem("checkChain") === "open"){
-		
-		mousemove: function(e) {
-			clicked && function(xAxis) {
-				var _this = $(this);
-				if(base > xAxis) {
-					base = xAxis;
-					_this.css('margin-left', '-=1px');
-				}
-				if(base < xAxis) {
-					base = xAxis;
-					_this.css('margin-left', '+=1px');
-				}
-			}.call($(this), e.pageX);
-		},
-		mousedown: function(e) {
-			clicked = true;
-			base = e.pageX;
-		},
-		mouseup: function(e) {
-			clicked = false;
-			base = 0;
-		}
-	
-	}
-	
+var clicked = false, clickX;
+$(document).on({
+    'mousemove': function(e) {
+        clicked && updateScrollPos(e);
+    },
+    'mousedown': function(e) {
+        e.preventDefault();        
+        clicked = true;
+        clickX = e.pageX;
+    },
+    'mouseup': function() {
+        clicked = false;
+        $('html').css('cursor', 'auto');
+    }
 });
 
+var updateScrollPos = function(e) {
+    $('html').css('cursor', 'grabbing');
+    $(window).scrollLeft($(window).scrollLeft() + (clickX - e.pageX));
+}
