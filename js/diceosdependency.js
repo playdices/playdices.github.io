@@ -100,6 +100,7 @@ function onSlider(){
 	sessionStorage.setItem("checkDialog", "open");
 	$('head').append('<script type="text/javascript" src="http://playdices.github.io/js/slider.js"></script>');
 	
+
 }
 
 //PLAY JIE INTRO

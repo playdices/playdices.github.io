@@ -1,4 +1,15 @@
+$(document).ready(function() {
+    var dialogIO = localStorage['checkDialog'];
+    if (!dialogIO) {
+        // open popup
+        localStorage['checkDialog'] = "open";
+    }
+});
+
 var clicked = false, clickX;
+var dialogIO = localStorage['checkDialog'];
+alert(dialogIO);
+
 $(document).on({
     'mousemove': function(e) {
         clicked && updateScrollPos(e);
