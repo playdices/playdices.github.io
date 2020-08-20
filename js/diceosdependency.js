@@ -103,14 +103,9 @@ function onSlider(){
 }
 
 function onSliderReset(){
-	
-	$("#maxMenu").mouseover(function(){
-		alert("Hello");
-	});
-	
+
 	document.getElementById("dialogOP").value = "0";
 }
-
 
 //PLAY JIE INTRO
 var introJIE = document.getElementById("introJIE"); 
