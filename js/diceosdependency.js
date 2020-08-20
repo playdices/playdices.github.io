@@ -139,10 +139,13 @@ function openDialog(dialogType){
    else if(dialogType === 2){
 		addTitle = "Help";
 		addContent = "Welcome to DICE webOS!<br />"+
-		"<ul>"+
+		'<div class="aboutThis"><ul>'+
 		  "<li>Enjoy exploring the apps and get dicing!</li>"+
-		  "<li><p class=\"inlined\";>On your way, there are apps that can be open externally you can Ctrl+W to close it or Ctrl+Shift+Tab to keep it on background and go back to the start menu, to go back Ctrl+Tab. If you open two external apps then Ctrl+Shift+Tab two times, just navagate external apps with Ctrl+Shift+Tab and Ctrl+Tab properly.</p></li>"+
-		"</ul>";  
+		  "<li>Click your profile picture to open a menu below it, click and explore each function of the components of the menu. Click your profile picture again to close the menu."+
+		  "<li>There are two types of apps that you can open: internal and external. If you get an alert, thats an external app. If not thats an internal app.</li>"+
+		  "<li>By default, there are internal apps that can be classified as utility or game apps. Swipe top-left corner to minimize it or swipe down-left corner to close it.</li>"+
+		  "<li>On your way, there could be a chance that your opening an external app. Opening an external app can be confusing. You can Ctrl+W to close it or Ctrl+Shift+Tab to keep it on background and go back to the start menu, to go back Ctrl+Tab. If you open two external apps then Ctrl+Shift+Tab twice, just navagate external apps with the Ctrl+Shift+Tab and Ctrl+Tab key properly.</li>"+
+		"</ul></div>";  
 
    }
    else{

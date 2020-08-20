@@ -12,10 +12,6 @@ body{
 	overflow: hidden;
 }
 
-.inlined{
-  display: inline;
-}
-
 .noselect {
 		-webkit-touch-callout: none; /* iOS Safari */
 		-webkit-user-select: none; /* Safari */
@@ -126,8 +122,6 @@ body{
 	
 	.pointerPlay {cursor: pointer;}
 	
-	
-	
 /* INTRO */
 
 /* background */
@@ -215,4 +209,17 @@ body{
 	
 	color: white;
 	font-size: 45px;
+}
+
+/* header details */
+.aboutThis{
+  height: 315px;
+  overflow-y: scroll;	
+}
+
+.aboutThis > ul{
+	text-align: justify;
+    background-color: #FFFFFF;
+    list-style: disc outside none;
+    padding: 10px 10px 10px 25px;
 }
