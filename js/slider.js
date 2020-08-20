@@ -1,4 +1,4 @@
-const slider = document.querySelector('#maxMenu');
+const slider = document.querySelector('body');
 let isDown = false;
 let startX;
 let scrollLeft;
