@@ -97,7 +97,7 @@ function utilityLoad(){
 
 function onSlider(){
 	
-	sessionStorage.setItem("checkDialog", "open");
+	document.getElementById("dialogOP").value = "0";
 	$('head').append('<script type="text/javascript" src="http://playdices.github.io/js/slider.js"></script>');
 	
 
