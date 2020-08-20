@@ -100,8 +100,17 @@ function onSlider(){
 	document.getElementById("dialogOP").value = "0";
 	$('head').append('<script type="text/javascript" src="http://playdices.github.io/js/slider.js"></script>');
 	
-
 }
+
+function onSliderReset(){
+	
+	$("#maxMenu").mouseover(function(){
+		alert("Hello");
+	});
+	
+	document.getElementById("dialogOP").value = "0";
+}
+
 
 //PLAY JIE INTRO
 var introJIE = document.getElementById("introJIE"); 

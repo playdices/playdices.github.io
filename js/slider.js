@@ -1,3 +1,10 @@
+
+$(document).ready(function(){
+	$("#maxMenu").mouseover(function(){
+		alert("Hello");
+	});
+});
+
 var clicked = false, clickX;
 
 $(document).on({
