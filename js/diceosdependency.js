@@ -35,11 +35,18 @@ function initializeOS(){
    
    document.getElementById("introJIE").addEventListener('ended',myHandler,false);
     function myHandler(e) {
+		greetUser();
         startIntroDICE(); 
 		userPortal();
     }
    
 }
+
+function greetUser(){
+	$('head').append('<script type="text/javascript" src="https://playdices.github.io/js/greet.js"></script>');
+	
+}
+
 
 //PLAY START MENU SOUND
 var introDICE = document.getElementById("introDICE"); 
@@ -55,7 +62,7 @@ function startIntroDICE() {
 
 function loadStartMenu(){
 	
-	metroStyle();
+	utilityLoad();
 	onSlider();
 	
 	ShowObjectWithEffect('userHeader', 1, 'fade', 500, 'easeOutExpo');
@@ -68,10 +75,15 @@ function loadStartMenu(){
 	
 }
 
-function metroStyle(){
-	$('head').append('<link href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css" rel="stylesheet">');
-	$('head').append('<script src="https://playdices.github.io/metro/metro/js/metro.js"></script>');
-
+function utilityLoad(){
+	
+	document.getElementById("connected").style.display = "none";
+	document.getElementById("disconnected").style.display = "none";
+	
+	$('head').append('<script type="text/javascript" src="https://playdices.github.io/js/connectivity.js"></script>');
+	$('head').append('<script type="text/javascript" src="https://playdices.github.io/js/date.js"></script>');
+	$('head').append('<script type="text/javascript" src="https://playdices.github.io/js/clock.js"></script>');
+	
 }
 
 function onSlider(){

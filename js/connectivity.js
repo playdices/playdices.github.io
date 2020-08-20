@@ -38,8 +38,6 @@ function clearconsole()
 
 document.addEventListener("DOMContentLoaded", function loadDetails(){
     
-	document.getElementById("connected").style.display = "none";
-	document.getElementById("disconnected").style.display = "none";
 	initializeConnection();
 	
 });
