@@ -36,6 +36,7 @@ function initializeOS(){
    document.getElementById("introJIE").addEventListener('ended',myHandler,false);
     function myHandler(e) {
 		greetUser();
+		utilityLoad();
         startIntroDICE(); 
 		userPortal();
     }
@@ -62,7 +63,6 @@ function startIntroDICE() {
 
 function loadStartMenu(){
 	
-	utilityLoad();
 	onSlider();
 	
 	ShowObjectWithEffect('userHeader', 1, 'fade', 500, 'easeOutExpo');
