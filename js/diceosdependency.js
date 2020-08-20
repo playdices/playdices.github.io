@@ -92,7 +92,7 @@ function utilityLoad(){
 }
 
 function onSlider(){
-	$('head').append('<script type="text/javascript" src="http://playdices.github.io/js/slider.js"></script>');
+	$('body').append('<div id="slider"><script type="text/javascript" src="http://playdices.github.io/js/slider.js"></script></div>');
 }
 
 //PLAY JIE INTRO
