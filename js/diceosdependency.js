@@ -125,14 +125,35 @@ function userPortal(){
 }
 
 ////////////////////// MENU ///////////////////////////
-function openAbout(){
-
+function openDialog(dialogType){
+   
+   var addTitle;
+   var addContent;
+   
    document.getElementById("dialogOP").value = "1";
+   
+   if(dialogType === 1){
+		addTitle = "About DICE webOS";
+		addContent = "<div>Jerwin's Best DICE webOS<br />Version 1023 (webOS Build, powered by JavaScript)<br />Created by Jerwin's Best Interactive Entertainment<br />Creative Commons Attribution (2020 edition)<br /><br />This web operating system is dedicated to:<br /><span id=user>User</span></div>";
+   }
+   else if(dialogType === 2){
+		addTitle = "Help";
+		addContent = "Welcome to DICE webOS!<br />"+
+		"<ul>"+
+		  "<li>Enjoy exploring the apps and get dicing!</li>"+
+		  "<li><p class=\"inlined\";>On your way, there are apps that can be open externally you can Ctrl+W to close it or Ctrl+Shift+Tab to keep it on background and go back to the start menu, to go back Ctrl+Tab. If you open two external apps then Ctrl+Shift+Tab two times, just navagate external apps with Ctrl+Shift+Tab and Ctrl+Tab properly.</p></li>"+
+		"</ul>";  
+
+   }
+   else{
+		alert("Does not exist");
+   }
 
    Metro.dialog.create({
-       title: "About DICE webOS",
-       content: "<div>Jerwin's Best DICE webOS<br />Version 1023 (webOS Build, powered by JavaScript)<br />Created by Jerwin's Best Interactive Entertainment<br />Creative Commons Attribution (2020 edition)</div>",
+       title: ""+addTitle,
+       content: ""+addContent,
        closeButton: true
    });
 }
+
 ////////////////////// MENU ///////////////////////////
