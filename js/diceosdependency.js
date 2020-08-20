@@ -92,7 +92,10 @@ function utilityLoad(){
 }
 
 function onSlider(){
-	$('body').append('<div id="slider"><script type="text/javascript" src="http://playdices.github.io/js/slider.js"></script></div>');
+	
+	sessionStorage.setItem("checkDialog", "open");
+	$('head').append('<script type="text/javascript" src="http://playdices.github.io/js/slider.js"></script>');
+	
 }
 
 //PLAY JIE INTRO
