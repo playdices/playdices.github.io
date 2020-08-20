@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
 	$("#maxMenu").mouseover(function(){
-		alert("Hello");
+		onSliderReset();
 	});
 });
 
