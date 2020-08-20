@@ -3,12 +3,13 @@ $(document).ready(function() {
     if (!dialogIO) {
         // open popup
         localStorage['checkDialog'] = "open";
+		alert(dialogIO);
     }
 });
 
 var clicked = false, clickX;
 var dialogIO = localStorage['checkDialog'];
-alert(dialogIO);
+
 
 $(document).on({
     'mousemove': function(e) {
