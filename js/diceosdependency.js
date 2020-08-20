@@ -22,6 +22,7 @@ window.addEventListener('resize', function(){
 
 document.addEventListener("DOMContentLoaded", function loadDetails(){
 	
+	window.scrollTo(0,0); 
 	document.getElementById("playIntroButton").setAttribute("class", "pointerPlay");
 	document.getElementById("bgDICE").style.display = "none";
 
