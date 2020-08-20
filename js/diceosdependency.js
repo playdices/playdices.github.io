@@ -21,8 +21,8 @@ window.addEventListener('resize', function(){
 
 
 document.addEventListener("DOMContentLoaded", function loadDetails(){
-	
-	window.scrollTo(0,0); 
+
+  
 	document.getElementById("playIntroButton").setAttribute("class", "pointerPlay");
 	document.getElementById("bgDICE").style.display = "none";
 
@@ -72,7 +72,9 @@ function loadStartMenu(){
 	ShowObjectWithEffect('logoPlaceholder', 1, 'fade', 500, 'easeOutExpo');
 	
 	setTimeout(function showItems(){ 
-		ShowObjectWithEffect('maxMenu', 1, 'fade', 500, 'easeOutExpo');
+	
+		ShowObjectWithEffect('maxMenu', 1, 'dropright', 500, 'easeOutCirc');
+		
    }, 1000);
 	
 	
@@ -87,6 +89,7 @@ function metroStyle(){
 
 function utilityLoad(){
 	
+	ShowObjectWithEffect('backdropped', 1, 'fade', 500, 'easeOutExpo');
 	$('head').append('<script type="text/javascript" src="https://playdices.github.io/js/date.js"></script>');
 	$('head').append('<script type="text/javascript" src="https://playdices.github.io/js/clock.js"></script>');
 	
