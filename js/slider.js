@@ -30,8 +30,8 @@ $(document).on({
 });
 
 var updateScrollPos = function(e) {
-	if(dialogIO == "open"){
+	
 		$('html').css('cursor', 'grabbing');
 		$(window).scrollLeft($(window).scrollLeft() + (clickX - e.pageX));
-	}
+	
 }
