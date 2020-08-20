@@ -1,31 +1,25 @@
 $(document).ready(function() {
-    var dialogIO = localStorage['checkDialog'];
-    if (!dialogIO) {
-        // open popup
-        localStorage['checkDialog'] = "open";
-		alert(dialogIO);
-    }
+
 });
 
 var clicked = false, clickX;
-var dialogIO = localStorage['checkDialog'];
 
 $(document).on({
 
 		'mousemove': function(e) {
-			if(dialogIO == "open"){
+			if($("#dialogOP").val() == 1){
 			clicked && updateScrollPos(e);
 		  }
 		},
 		'mousedown': function(e) {
-			if(dialogIO == "open"){
+			if($("#dialogOP").val() == 1){
 			e.preventDefault();        
 			clicked = true;
 			clickX = e.pageX;
 		  }
 		},
 		'mouseup': function() {
-			if(dialogIO == "open"){
+			if($("#dialogOP").val() == 1){
 			clicked = false;
 			$('html').css('cursor', 'auto');
 		  }
