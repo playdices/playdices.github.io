@@ -1,27 +1,12 @@
-const slider = document.querySelector('body');
-let isDown = false;
-let startX;
-let scrollLeft;
+var curYPos = 0,
+    curXPos = 0,
+    curDown = false;
 
-slider.addEventListener('mousedown', (e) => {
-  isDown = true;
-  slider.classList.add('active');
-  startX = e.pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
+window.addEventListener('mousemove', function(e){ 
+  if(curDown === true){
+    window.scrollTo(document.body.scrollLeft + (curXPos - e.pageX), document.body.scrollTop + (curYPos - e.pageY));
+  }
 });
-slider.addEventListener('mouseleave', () => {
-  isDown = false;
-  slider.classList.remove('active');
-});
-slider.addEventListener('mouseup', () => {
-  isDown = false;
-  slider.classList.remove('active');
-});
-slider.addEventListener('mousemove', (e) => {
-  if(!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX) * 3; //scroll-fast
-  slider.scrollLeft = scrollLeft - walk;
-  console.log(walk);
-});
+
+window.addEventListener('mousedown', function(e){ curDown = true; curYPos = e.pageY; curXPos = e.pageX; });
+window.addEventListener('mouseup', function(e){ curDown = false; }); 
