@@ -32,10 +32,10 @@ document.addEventListener("DOMContentLoaded", function loadDetails(){
 function initializeOS(){
    
    startIntroJIE();
+   greetUser();
    
    document.getElementById("introJIE").addEventListener('ended',myHandler,false);
     function myHandler(e) {
-		greetUser();
 		utilityLoad();
         startIntroDICE(); 
 		userPortal();
@@ -63,15 +63,24 @@ function startIntroDICE() {
 
 function loadStartMenu(){
 	
+	metroStyle();
 	onSlider();
 	
 	ShowObjectWithEffect('userHeader', 1, 'fade', 500, 'easeOutExpo');
+	ShowObjectWithEffect('menuHolder', 1, 'fade', 500, 'easeOutExpo');
 	ShowObjectWithEffect('logoPlaceholder', 1, 'fade', 500, 'easeOutExpo');
 	
 	setTimeout(function showItems(){ 
 		ShowObjectWithEffect('maxMenu', 1, 'fade', 500, 'easeOutExpo');
    }, 1000);
 	
+	
+}
+
+function metroStyle(){
+	
+	$('head').append('<link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css">');
+	$('head').append('<script src="https://cdn.metroui.org.ua/v4.3.2/js/metro.min.js"></script>');
 	
 }
 
