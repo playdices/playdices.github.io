@@ -124,4 +124,15 @@ function userPortal(){
 	
 }
 
+////////////////////// MENU ///////////////////////////
+function openAbout(){
 
+   document.getElementById("dialogOP").value = "1";
+
+   Metro.dialog.create({
+       title: "About DICE webOS",
+       content: "<div>Jerwin's Best DICE webOS<br />Version 1023 (webOS Build, powered by JavaScript)<br />Created by Jerwin's Best Interactive Entertainment<br />Creative Commons Attribution (2020 edition)</div>",
+       closeButton: true
+   });
+}
+////////////////////// MENU ///////////////////////////
