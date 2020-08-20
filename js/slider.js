@@ -1,28 +1,27 @@
-var clicked = false, clickX;
-$(document).on({
-	
-		
-		'mousemove': function(e) {
-			clicked && updateScrollPos(e);
-		},
-		'mousedown': function(e) {
-			e.preventDefault();        
-			clicked = true;
-			clickX = e.pageX;
-		},
-		'mouseup': function() {
-			clicked = false;
-			$('#maxMenu').css('cursor', 'auto');
-		}
-	
-	
-	
+const slider = document.querySelector('#maxMenu');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', (e) => {
+  isDown = true;
+  slider.classList.add('active');
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
 });
-
-var updateScrollPos = function(e) {
-	
-
-		$('#maxMenu').css('cursor', 'grabbing');
-		$(window).scrollLeft($(window).scrollLeft() + (clickX - e.pageX));
-	
-}
+slider.addEventListener('mouseleave', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mouseup', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mousemove', (e) => {
+  if(!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 3; //scroll-fast
+  slider.scrollLeft = scrollLeft - walk;
+  console.log(walk);
+});
