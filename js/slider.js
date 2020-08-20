@@ -8,23 +8,29 @@ $(document).ready(function() {
 });
 
 var clicked = false, clickX;
+var dialogIO = localStorage['checkDialog'];
 
 $(document).on({
-	var dialogIO = localStorage['checkDialog'];
-	if(dialogIO == "open")
+
 		'mousemove': function(e) {
+			if(dialogIO == "open"){
 			clicked && updateScrollPos(e);
+		  }
 		},
 		'mousedown': function(e) {
+			if(dialogIO == "open"){
 			e.preventDefault();        
 			clicked = true;
 			clickX = e.pageX;
+		  }
 		},
 		'mouseup': function() {
+			if(dialogIO == "open"){
 			clicked = false;
 			$('html').css('cursor', 'auto');
+		  }
 		}
-	}
+	
 	
 });
 
