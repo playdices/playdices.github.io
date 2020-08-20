@@ -8,6 +8,10 @@ p {
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
 	overflow: hidden;
 }

@@ -1,25 +1,20 @@
-var clicked = false, base = 0;
-
-$('#someDiv').on({
-    mousemove: function(e) {
-        clicked && function(xAxis) {
-            var _this = $(this);
-            if(base > xAxis) {
-                base = xAxis;
-                _this.css('margin-left', '-=1px');
-            }
-            if(base < xAxis) {
-                base = xAxis;
-                _this.css('margin-left', '+=1px');
-            }
-        }.call($(this), e.pageX);
+var clicked = false, clickX;
+$(document).on({
+    'mousemove': function(e) {
+        clicked && updateScrollPos(e);
     },
-    mousedown: function(e) {
+    'mousedown': function(e) {
+        e.preventDefault();        
         clicked = true;
-        base = e.pageX;
+        clickX = e.pageX;
     },
-    mouseup: function(e) {
+    'mouseup': function() {
         clicked = false;
-        base = 0;
+        $('html').css('cursor', 'auto');
     }
 });
+
+var updateScrollPos = function(e) {
+    $('html').css('cursor', 'grabbing');
+    $(window).scrollLeft($(window).scrollLeft() + (clickX - e.pageX));
+}
