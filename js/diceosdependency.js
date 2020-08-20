@@ -77,9 +77,6 @@ function loadStartMenu(){
 
 function utilityLoad(){
 	
-	document.getElementById("connected").style.display = "none";
-	document.getElementById("disconnected").style.display = "none";
-	
 	$('head').append('<script type="text/javascript" src="https://playdices.github.io/js/date.js"></script>');
 	$('head').append('<script type="text/javascript" src="https://playdices.github.io/js/clock.js"></script>');
 	

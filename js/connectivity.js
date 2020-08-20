@@ -38,7 +38,13 @@ function clearconsole()
 
 document.addEventListener("DOMContentLoaded", function loadDetails(){
     
-	initializeConnection();
+	document.getElementById("connected").style.display = "none";
+	document.getElementById("disconnected").style.display = "none";
+	
+	document.getElementById("introJIE").addEventListener('ended',myHandler,false);
+    function myHandler(e) {
+		initializeConnection();
+    }
 	
 });
 
