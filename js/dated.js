@@ -10,7 +10,6 @@ function dateSet()
    var basicdate = document.getElementById('basicdate');
    basicdate.innerHTML = today;
 
-   
    setTimeout("dateSet()", 1000);
 }
 dateSet();
