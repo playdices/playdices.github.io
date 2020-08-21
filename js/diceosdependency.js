@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function loadDetails(){
 	   ShowObjectWithEffect('playIntroButton', 1, 'fade', 500, 'easeOutExpo');
 	}, false);
 
-
 	document.getElementById("userMenuOP").style.display = "none";
     document.getElementById("dialogOP").style.display = "none";
 	document.getElementById("playIntroButton").setAttribute("class", "pointerPlay");
