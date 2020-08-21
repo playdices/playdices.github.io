@@ -47,7 +47,9 @@ function initializeOS(){
    
    document.getElementById("introJIE").addEventListener('ended',myHandler,false);
     function myHandler(e) {
-		utilityLoad();
+		
+		ShowObjectWithEffect('backdropped', 1, 'fade', 500, 'easeOutExpo');
+		
         startIntroDICE(); 
 		userPortal();
     }
@@ -98,11 +100,6 @@ function metroStyle(){
 	
 }
 
-function utilityLoad(){
-	
-	ShowObjectWithEffect('backdropped', 1, 'fade', 500, 'easeOutExpo');
-
-}
 
 function onSlider(){
 	
