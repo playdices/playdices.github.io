@@ -6,7 +6,7 @@ function date()
    var date = ((now.getDate() < 10) ? "0" : "") + now.getDate();
    var year = (now.getYear() < 1000) ? now.getYear() + 1900 : now.getYear();
    today = days[now.getDay()] + ", " + months[now.getMonth()] + " " + date + ", " + year;
-   var basicdate = document.getElementById('basicdate');
+   var basicdate = document.getElementById('basicdated');
    basicdate.innerHTML = today;
    setTimeout("date()", 1000);
 }
