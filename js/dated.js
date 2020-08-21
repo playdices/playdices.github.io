@@ -8,6 +8,7 @@ function date()
    today = days[now.getDay()] + ", " + months[now.getMonth()] + " " + date + ", " + year;
    var basicdate = document.getElementById('basicdated');
    basicdate.innerHTML = today;
+   alert(today);
    setTimeout("date()", 1000);
 }
 date();
