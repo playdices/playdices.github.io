@@ -178,6 +178,23 @@ function updateDialogs(){
 	
 }
 
+function delayOpenDialog(dialogType){
+	
+	setTimeout(function openThisDialog(){ 
+
+		openDialog(dialogType);
+		
+   }, 250);
+}
+
+function delayExecuteDialog(dialogType){
+	
+	setTimeout(function executeThisDialog(){ 
+
+		executeDialog(dialogType);
+		
+   }, 250);
+}
 
 function openDialog(dialogType){
    
@@ -187,13 +204,14 @@ function openDialog(dialogType){
 	updateDialogs();
    
    if(dialogType === 1){
-		addTitle = "About DICE webOS";
-		addContent = "<div>Jerwin's Best DICE webOS<br />Version 1023 (webOS Build, powered by JavaScript)<br />Created by Jerwin's Best Interactive Entertainment<br />Creative Commons Attribution (2020 release)<br /><br />This web operating system is dedicated to:<br /><span id=user>User</span></div>";
+		addTitle = '<span class="noselect">About DICE webOS</span>';
+		addContent = '<div class="noselect">Jerwin\'s Best DICE webOS<br />'+
+		"Version 1023 (webOS Build, powered by JavaScript)<br />Created by Jerwin's Best Interactive Entertainment<br />Creative Commons Attribution (2020 release)<br /><br />This web operating system is dedicated to:<br /><span id=user>User</span></div>";
    }
    else if(dialogType === 2){
-		addTitle = "Help";
-		addContent = "Welcome to DICE webOS!<br />"+
-		'<div class="aboutThis"><ul>'+
+		addTitle = '<span class="noselect">Help</span>';
+		addContent = '<span class="noselect">Welcome to DICE webOS!<br /></span>'+
+		'<div class="aboutThis noselect"><ul>'+
 		  "<li>Enjoy exploring the apps and get dicing!</li>"+
 		  "<li>Click or right click your profile picture to open a menu below it, click and explore each function of the components of the menu. Click your profile picture again to close the menu."+
 		  "<li>There is a setting in the menu, you can customize your personal interface!</li>"+
@@ -227,31 +245,35 @@ function executeDialog(dialogType){
    
     
 	if(dialogType === 1){
-		addTitle = "Settings";
-		addContent = "<b>DICE webOS settings!</b><br />"+
-		'<div class="settings">'+
-		  "<p></p>"+ /* FOR PROFILE AND NAME */
-		  "<p>Color Theme (Background and Menu)</p>"+
-		  "<p>Slideshow</p>"+
+		addTitle = '<span class="noselect">Settings</span>';
+		addContent = '<span class="noselect">DICE webOS settings!</b><br /><br /></span>'+
+		'<div class="settings noselect">'+
+		  '<div align="center"><img class="noselect" ondragstart="return false;" id="displayPhoto" src="https://playdices.github.io/images/profile.png" title="Select an image!" alt="Select an image!" style="border-radius:50%" width="200" height="200" /></div><br />'+ /* FOR PROFILE AND NAME */
+		  '<div>'+
+			"<label>Username</label>"+
+			'<input id="username" name="formUserName" class="form-control" type="text" onkeydown="onChangeNameDetails();"placeholder="Username" required="">'+
+			'</div><br />'+
+		  "<label>Accent Color Theme</label><br />"+
+		  "<label>Slideshow</label><br /><br />"+
 		"</div>";
-		
-		
+
 		captionA = "Apply";
 		captionB = "Cancel";
-		buttonA = "button success primary";
+		buttonA = "button success primary js-dialog-close";
 		buttonB = "js-dialog-close";
+		
 	}
 	else if(dialogType === 2){
-	    addTitle = "Restart";
-		addContent = "<div>Are you sure you want to restart DICE webOS?</div>";
+	    addTitle = '<span class="noselect">Restart</span>';
+		addContent = '<div class="noselect">Are you sure you want to restart DICE webOS?</div>';
 		captionA = "Continue";
 		captionB = "Cancel";
 		buttonA = "js-dialog-close alert";
 		buttonB = "js-dialog-close";
 	}
 	else if(dialogType === 3){
-		addTitle = "Restart";
-		addContent = "<div>Are you sure you want to shutdown DICE webOS?</div>";
+		addTitle = '<span class="noselect">Shutdown</span>';
+		addContent = '<div class="noselect">Are you sure you want to shutdown DICE webOS?</div>';
 		captionA = "Continue";
 		captionB = "Cancel";
 		buttonA = "js-dialog-close alert";
@@ -295,6 +317,12 @@ function applyDialogAction(task){
 	else{
 		alert("Action not applied.");
 	}
+	
 }
-
 ////////////////////// MENU ///////////////////////////
+
+/////////////// SETTINGS FUNCTION ////////////////////
+
+
+
+/////////////// SETTINGS FUNCTION ////////////////////
