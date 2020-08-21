@@ -22,7 +22,17 @@ window.addEventListener('resize', function(){
 
 document.addEventListener("DOMContentLoaded", function loadDetails(){
 
-  
+	var videoHD = document.getElementById('introJIE');
+	videoHD.src = 'https://playdices.github.io/videos/intronly.mp4';
+	videoHD.load();
+
+	videoHD.addEventListener('loadeddata', function() {
+	   ShowObjectWithEffect('playIntroButton', 1, 'fade', 500, 'easeOutExpo');
+	}, false);
+
+
+	document.getElementById("userMenuOP").style.display = "none";
+    document.getElementById("dialogOP").style.display = "none";
 	document.getElementById("playIntroButton").setAttribute("class", "pointerPlay");
 	document.getElementById("bgDICE").style.display = "none";
 
@@ -65,10 +75,11 @@ function startIntroDICE() {
 function loadStartMenu(){
 	
 	metroStyle();
+	onUserMenu();
 	onSlider();
 	
+	document.getElementById("JIEIntroBox").style.display = "none";
 	ShowObjectWithEffect('userHeader', 1, 'fade', 500, 'easeOutExpo');
-	ShowObjectWithEffect('menuHolder', 1, 'fade', 500, 'easeOutExpo');
 	ShowObjectWithEffect('logoPlaceholder', 1, 'fade', 500, 'easeOutExpo');
 	
 	setTimeout(function showItems(){ 
@@ -90,9 +101,7 @@ function metroStyle(){
 function utilityLoad(){
 	
 	ShowObjectWithEffect('backdropped', 1, 'fade', 500, 'easeOutExpo');
-	$('head').append('<script type="text/javascript" src="https://playdices.github.io/js/date.js"></script>');
-	$('head').append('<script type="text/javascript" src="https://playdices.github.io/js/clock.js"></script>');
-	
+
 }
 
 function onSlider(){
@@ -102,9 +111,16 @@ function onSlider(){
 	
 }
 
+function onUserMenu(){
+	
+	document.getElementById("userMenuOP").value = "0";
+	
+}
+
 function onSliderReset(){
 
 	document.getElementById("dialogOP").value = "0";
+	
 }
 
 //PLAY JIE INTRO
@@ -125,12 +141,49 @@ function userPortal(){
 }
 
 ////////////////////// MENU ///////////////////////////
+
+document.getElementById("userPhotoDisplay").addEventListener('contextmenu', function(ev) {
+    ev.preventDefault();
+    triggerMenu();
+    return false;
+}, false);
+
+document.getElementById("userPhotoDisplay").addEventListener('click', function(ev) {
+    ev.preventDefault();
+    triggerMenu();
+    return false;
+}, false);
+
+function triggerMenu(){
+	
+	var state = document.getElementById("userMenuOP").value;
+	
+	if(state === "0"){
+		document.getElementById("userMenuOP").value = "1";
+		ShowObjectWithEffect('menuHolder', 1, 'slideup', 500, 'easeInOutQuint');
+	}
+	else{
+		document.getElementById("userMenuOP").value = "0";
+		ShowObjectWithEffect('menuHolder', 0, 'slideup', 500, 'easeOutExpo');
+	}
+	
+}
+
+function updateDialogs(){
+	
+	ShowObjectWithEffect('menuHolder', 0, 'slideup', 500, 'easeOutExpo');
+    document.getElementById("userMenuOP").value = "0";
+	document.getElementById("dialogOP").value = "1";
+	
+}
+
+
 function openDialog(dialogType){
    
    var addTitle;
    var addContent;
    
-   document.getElementById("dialogOP").value = "1";
+	updateDialogs();
    
    if(dialogType === 1){
 		addTitle = "About DICE webOS";
@@ -141,7 +194,8 @@ function openDialog(dialogType){
 		addContent = "Welcome to DICE webOS!<br />"+
 		'<div class="aboutThis"><ul>'+
 		  "<li>Enjoy exploring the apps and get dicing!</li>"+
-		  "<li>Click your profile picture to open a menu below it, click and explore each function of the components of the menu. Click your profile picture again to close the menu."+
+		  "<li>Click or right click your profile picture to open a menu below it, click and explore each function of the components of the menu. Click your profile picture again to close the menu."+
+		  "<li>There is a setting in the menu, you can customize your personal interface!</li>"+
 		  "<li>There are two types of apps that you can open: internal and external. If you get an alert, thats an external app. If not thats an internal app.</li>"+
 		  "<li>By default, there are internal apps that can be classified as utility or game apps. Swipe top-left corner to minimize it or swipe down-left corner to close it.</li>"+
 		  "<li>On your way, there could be a chance that your opening an external app. Opening an external app can be confusing. You can Ctrl+W to close it or Ctrl+Shift+Tab to keep it on background and go back to the start menu, to go back Ctrl+Tab. If you open two external apps then Ctrl+Shift+Tab twice, just navagate external apps with the Ctrl+Shift+Tab and Ctrl+Tab key properly.</li>"+
@@ -155,8 +209,91 @@ function openDialog(dialogType){
    Metro.dialog.create({
        title: ""+addTitle,
        content: ""+addContent,
-       closeButton: true
+	   closeButton: true
    });
+}
+
+function executeDialog(dialogType){
+	
+   var addTitle;
+   var addContent;
+   var captionA;
+   var captionB;
+   var buttonA;
+   var buttonB;
+   
+   updateDialogs();
+   
+    
+	if(dialogType === 1){
+		addTitle = "Settings";
+		addContent = "<b>DICE webOS settings!</b><br />"+
+		'<div class="settings">'+
+		  "<p></p>"+ /* FOR PROFILE AND NAME */
+		  "<p>Color Theme (Background and Menu)</p>"+
+		  "<p>Slideshow</p>"+
+		"</div>";
+		
+		
+		captionA = "Apply";
+		captionB = "Cancel";
+		buttonA = "button success primary";
+		buttonB = "js-dialog-close";
+	}
+	else if(dialogType === 2){
+	    addTitle = "Restart";
+		addContent = "<div>Are you sure you want to restart DICE webOS?</div>";
+		captionA = "Continue";
+		captionB = "Cancel";
+		buttonA = "js-dialog-close alert";
+		buttonB = "js-dialog-close";
+	}
+	else if(dialogType === 3){
+		addTitle = "Restart";
+		addContent = "<div>Are you sure you want to shutdown DICE webOS?</div>";
+		captionA = "Continue";
+		captionB = "Cancel";
+		buttonA = "js-dialog-close alert";
+		buttonB = "js-dialog-close";
+	}
+	else{
+		alert("Does not exist");
+	}
+   
+	
+	Metro.dialog.create({
+        title: ""+addTitle,
+        content: ""+addContent,
+        actions: [
+            {
+                caption: ""+captionA,
+                cls: ""+buttonA,
+                onclick: function(){
+                    applyDialogAction(dialogType);
+                }
+            },
+            {
+                caption: ""+captionB,
+                cls: ""+buttonB,
+            }
+        ]
+    });
+}
+
+function applyDialogAction(task){
+	
+	if(task === 1){
+		alert("Action 1");
+	}
+	else if(task === 2){
+		alert("Action 2");
+	}
+	else if(task === 3){
+		alert("Action 3");
+	}
+	else{
+		alert("Action not applied.");
+	}
 }
 
 ////////////////////// MENU ///////////////////////////
