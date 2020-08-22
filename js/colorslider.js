@@ -19,8 +19,26 @@ var divB = document.getElementById("thumbie");
 	function changeSlider(){
 		if (sessionStorage.getItem("setHexColor").length !== 0) {
 		var thisColor = sessionStorage.getItem("setHexColor");
+		
+		
 		$('.sliderio').css('background-color',thisColor);
+		
+		
 	  }
+	  
+	  if (sessionStorage.getItem("setOffsetColor").length !== 0) {
+		
+		var offsetColor = sessionStorage.getItem("setOffsetColor");
+		var thisOffsetColor = "hue-rotate("+offsetColor+"deg)";
+		
+	    $('#layerGround').css('filter',thisOffsetColor);
+		
+	  }
+	  
+	  
+	  
+	  
+	  
 	}
 
 
@@ -54,6 +72,8 @@ var divB = document.getElementById("thumbie");
 		document.getElementById("hexie").innerHTML = hexColor;
 		
 		document.getElementById("thumbie").style.backgroundColor = hexColor;
+		
+		sessionStorage.setItem("setOffsetColor", divA.offsetLeft);
 		sessionStorage.setItem("setHexColor", hexColor);
 		
 		
