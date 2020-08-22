@@ -17,12 +17,11 @@ var divB = document.getElementById("thumbie");
 	}
 
 	function changeSlider(){
+		
 		if (sessionStorage.getItem("setHexColor").length !== 0) {
 		var thisColor = sessionStorage.getItem("setHexColor");
 		
-		
 		$('.sliderio').css('background-color',thisColor);
-		
 		
 	  }
 	  
@@ -34,10 +33,6 @@ var divB = document.getElementById("thumbie");
 	    $('#layerGround').css('filter',thisOffsetColor);
 		
 	  }
-	  
-	  
-	  
-	  
 	  
 	}
 
