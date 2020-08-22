@@ -41,8 +41,8 @@ document.addEventListener("DOMContentLoaded", function loadDetails(){
 //LOAD DICE OS
 function initializeOS(){
    
-   loadStartMenu();
-   //startIntroJIE();
+   
+   startIntroJIE();
    greetUser();
    
    document.getElementById("introJIE").addEventListener('ended',myHandler,false);
@@ -145,6 +145,22 @@ function userPortal(){
 
 ////////////////////// MENU ///////////////////////////
 
+function openAbout(){
+	delayOpenDialog(1);
+}
+
+function openHelp(){
+	delayOpenDialog(2);
+}
+
+function executeRestart(){
+	delayExecuteDialog(1);
+}
+
+function executeShutdown(){
+	delayExecuteDialog(2);
+}
+
 document.getElementById("userPhotoDisplay").addEventListener('contextmenu', function(ev) {
     ev.preventDefault();
     triggerMenu();
@@ -200,6 +216,8 @@ function delayExecuteDialog(dialogType){
 
 function openDialog(dialogType){
    
+   
+   
    var addTitle;
    var addContent;
    
@@ -236,6 +254,8 @@ function openDialog(dialogType){
 
 function executeDialog(dialogType){
 	
+   
+	
    var addTitle;
    var addContent;
    var captionA;
@@ -247,28 +267,6 @@ function executeDialog(dialogType){
    
     
 	if(dialogType === 1){
-		addTitle = '<span class="noselect">Settings</span>';
-		addContent = '<span class="noselect">DICE webOS settings!</b><br /><br /></span>'+
-		'<div class="settings">'+
-		  '<div align="center"><img class="noselect" ondragstart="return false;" id="displayPhoto" src="https://playdices.github.io/images/profile.png" title="Select an image!" alt="Select an image!" style="border-radius:50%" width="200" height="200" /></div><br />'+ /* FOR PROFILE AND NAME */
-		  '<div>'+
-			"<label>Username</label>"+
-			'<input id="username" name="formUserName" class="form-control" type="text" onkeydown="onChangeNameDetails();"placeholder="Username" required="">'+
-			'</div><br />'+
-		  "<label>Accent Color Theme</label><br />"+
-		  '<div class="slider">'+
-			'<div id="thumb" class="handle"></div>'+
-		  '</div>'+
-		  "<label>Slideshow</label><br /><br />"+
-		"</div>";
-
-		captionA = "Apply";
-		captionB = "Cancel";
-		buttonA = "button success primary js-dialog-close";
-		buttonB = "js-dialog-close";
-		
-	}
-	else if(dialogType === 2){
 	    addTitle = '<span class="noselect">Restart</span>';
 		addContent = '<div class="noselect">Are you sure you want to restart DICE webOS?</div>';
 		captionA = "Continue";
@@ -276,7 +274,7 @@ function executeDialog(dialogType){
 		buttonA = "js-dialog-close alert";
 		buttonB = "js-dialog-close";
 	}
-	else if(dialogType === 3){
+	else if(dialogType === 2){
 		addTitle = '<span class="noselect">Shutdown</span>';
 		addContent = '<div class="noselect">Are you sure you want to shutdown DICE webOS?</div>';
 		captionA = "Continue";
@@ -297,6 +295,7 @@ function executeDialog(dialogType){
                 caption: ""+captionA,
                 cls: ""+buttonA,
                 onclick: function(){
+					
                     applyDialogAction(dialogType);
                 }
             },
@@ -316,9 +315,6 @@ function applyDialogAction(task){
 	else if(task === 2){
 		alert("Action 2");
 	}
-	else if(task === 3){
-		alert("Action 3");
-	}
 	else{
 		alert("Action not applied.");
 	}
@@ -328,19 +324,19 @@ function applyDialogAction(task){
 
 /////////////// SETTINGS FUNCTION ////////////////////
 
-document.getElementById("thumb").addEventListener("mousedown", onColorDown);
-document.getElementById("thumb").addEventListener("mouseup", onColorUp);
-
-function onColorDown() {
-  $(this).addClass("pop");
-  $(this).parent(".slider").addClass("grad");
+function openSettings(){
+	
+	updateDialogs();
+	ShowObjectWithEffect('layerGround', 1, 'fade', 500, 'easeOutExpo');
+	ShowObjectWithEffect('settingsWindow', 1, 'fade', 500, 'easeOutExpo');
 }
 
-function onColorUp() {
-  $(this).removeClass("pop");
-  $(this).parent(".slider").removeClass("grad");
-}
+document.getElementById("myRange").addEventListener('change', updateValue);
 
+function updateValue() {
+  var x = document.getElementById("myRange").value;
+  document.getElementById("rangeInfo").innerHTML = x;
+}
 
 
 /////////////// SETTINGS FUNCTION ////////////////////

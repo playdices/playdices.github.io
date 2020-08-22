@@ -212,12 +212,6 @@ body{
 }
 
 /* header details */
-.settings{
-  height: 310px;
-  padding: 0px 20px 0px 20px;
-  overflow-y: scroll;	
-}
-
 .centerSet {
     float: left;
     width: 100%;
@@ -238,15 +232,47 @@ body{
 }
 
 /* Color Slider */
-.slider {
-  position: relative;
-  width: 300px;
-  height: 4px;
-  margin: 10%;
-  background: red;
-  border-radius: 2px;
-  
+
+.slidecontainer {
+  width: 100%;
 }
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 24px;
+  border: 0;
+  border-radius: 50%; 
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 23px;
+  height: 24px;
+  border: 0;
+  border-radius: 50%; 
+  background: #4CAF50;
+  cursor: pointer;
+}
+
 
 .grad {
 background: #ff3232; /* Old browsers */
@@ -259,46 +285,12 @@ background: linear-gradient(to right,  #ff3232 0%,#fff130 20%,#45ff30 35%,#28fff
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', endColorstr='#ff0094',GradientType=1 ); /* IE6-9 */
 }
 
-.handle{
-  position: absolute;
-  top: -10px;
-  left: 0;
-  width: 24px;
-  height: 24px;
-  border-radius: 12px;
-  background: red;
-  box-shadow: 0 0 0 0 rgba(0,0,0,.3), inset 0 0 0 0 #fff;
-  transition: box-shadow .2s;
-}
-
-.handle.pop {
-  
-  box-shadow: 0 0 4px 0 rgba(0,0,0,.3), inset 0 0 0 4px #fff;
-}
-
-.handle:before {
-  content: '';
-  position: absolute;
-  top:8px;
-  left:50%;
-  margin-left: -2px;
-  background: inherit;
-  width: 4px;
-  height: 4px;
-  border-radius: 20px;
-  transition: top .2s,left .2s,margin-left .2s, height .2s,width .2s;
- }
-.handle.pop:before {
-  top:-50px;
-  left:50%;
-  margin-left: -20px;
-  background: inherit;
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px 0 rgba(0,0,0,.3);
-  
- }
-
-
 /* Color Slider */
+
+
+/* Settings */
+.settings{
+  height: 310px;
+  padding: 0px 20px 0px 20px;
+  overflow-y: scroll;	
+}
