@@ -18,10 +18,10 @@
 	}
 
 	function changeSlider(){
-		
+		if (sessionStorage.getItem("setHexColor").length !== 0) {
 		var thisColor = sessionStorage.getItem("setHexColor");
-		$('.slider').css('background-color',thisColor);
-	  
+		$('.sliderio').css('background-color',thisColor);
+	  }
 	}
 
 
