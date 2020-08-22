@@ -41,7 +41,8 @@ document.addEventListener("DOMContentLoaded", function loadDetails(){
 //LOAD DICE OS
 function initializeOS(){
    
-   startIntroJIE();
+   loadStartMenu();
+   //startIntroJIE();
    greetUser();
    
    document.getElementById("introJIE").addEventListener('ended',myHandler,false);
@@ -248,13 +249,16 @@ function executeDialog(dialogType){
 	if(dialogType === 1){
 		addTitle = '<span class="noselect">Settings</span>';
 		addContent = '<span class="noselect">DICE webOS settings!</b><br /><br /></span>'+
-		'<div class="settings noselect">'+
+		'<div class="settings">'+
 		  '<div align="center"><img class="noselect" ondragstart="return false;" id="displayPhoto" src="https://playdices.github.io/images/profile.png" title="Select an image!" alt="Select an image!" style="border-radius:50%" width="200" height="200" /></div><br />'+ /* FOR PROFILE AND NAME */
 		  '<div>'+
 			"<label>Username</label>"+
 			'<input id="username" name="formUserName" class="form-control" type="text" onkeydown="onChangeNameDetails();"placeholder="Username" required="">'+
 			'</div><br />'+
 		  "<label>Accent Color Theme</label><br />"+
+		  '<div class="slider">'+
+			'<div id="thumb" class="handle"></div>'+
+		  '</div>'+
 		  "<label>Slideshow</label><br /><br />"+
 		"</div>";
 
@@ -323,6 +327,19 @@ function applyDialogAction(task){
 ////////////////////// MENU ///////////////////////////
 
 /////////////// SETTINGS FUNCTION ////////////////////
+
+document.getElementById("thumb").addEventListener("mousedown", onColorDown);
+document.getElementById("thumb").addEventListener("mouseup", onColorUp);
+
+function onColorDown() {
+  $(this).addClass("pop");
+  $(this).parent(".slider").addClass("grad");
+}
+
+function onColorUp() {
+  $(this).removeClass("pop");
+  $(this).parent(".slider").removeClass("grad");
+}
 
 
 
