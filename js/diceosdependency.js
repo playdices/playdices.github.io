@@ -331,11 +331,8 @@ function openSettings(){
 	ShowObjectWithEffect('settingsWindow', 1, 'fade', 500, 'easeOutExpo');
 }
 
-document.getElementById("myRange").addEventListener('change', updateValue);
-
-function updateValue() {
-  var x = document.getElementById("myRange").value;
-  document.getElementById("rangeInfo").innerHTML = x;
+function hellox(){
+	alert("H");
 }
 
 

@@ -1,32 +1,99 @@
-  $(".handle").mousedown(function() {
-    $(this).addClass("pop");
-    $(this).parent(".slider").addClass("grad");
 
+	var divB = document.getElementById("thumbie");
+
+	divB.addEventListener("mousedown", onColorDown);
+	divB.addEventListener("mouseup", onColorUp);
+
+	function onColorDown() {
+	  $(this).addClass("pop");
+	  $(this).parent(".slider").addClass("grad");
+	}
+
+	function onColorUp() {
+
+	  $(this).removeClass("pop");
+	  $(this).parent(".slider").removeClass("grad");
+	  changeSlider();
+
+	}
+
+	function changeSlider(){
+		if (sessionStorage.getItem("setHexColor").length !== 0) {
+		var thisColor = sessionStorage.getItem("setHexColor");
+		$('.slider').css('background-color',thisColor);
+	  }
+	}
+
+
+	var divA = document.getElementById("thumbie");
+
+    divA.addEventListener('mousedown', function() {
+      startDrag();
     });
- $(".handle").mouseup(function() {
-    $(this).removeClass("pop");
-      $(this).parent(".slider").removeClass("grad");
 
-    });
-    
+    function startDrag() {
+      document.onmouseup = finishDrag;
 
-      $( ".handle" ).draggable({ 
-      axis: "x",
-      containment: "parent",
-      drag: function( event, ui ) {
-        var thisOffset = $(this).position().left;
-        var angle = (thisOffset/300)*360;
-        var hslcolor = "hsl("+ angle + ", 100%, 50%)";
-        $(this).css("background-color", hslcolor)
+      document.onmousemove = function(e) {
+		
+		if(divA.offsetLeft >= 0){
+		   divA.style.left = (divA.offsetLeft + e.movementX) + "px";
+		}
+		
+		if(divA.offsetLeft < 0){
+			divA.style.left = (0 + 0) + "px";
+		}
+		
+		if(divA.offsetLeft > 360){
+			divA.style.left = (360 + 0) + "px";
+		}
         
-        $(this).parent(".slider").css("background-color", hslcolor)
-      },
-      /*start: function( event, ui ) {
-        $(this).addClass("pop");
-         $(this).parent(".slider").addClass("grad");
-      },*/
-      stop: function( event, ui ) {
-        $(this).removeClass("pop");
-             $(this).parent(".slider").removeClass("grad");
+		
+		document.getElementById("offsetie").innerHTML = divA.offsetLeft;
+		
+		var hexColor = hslToHex(divA.offsetLeft,100,50);
+		document.getElementById("hexie").innerHTML = hexColor;
+		
+		document.getElementById("thumbie").style.backgroundColor = hexColor;
+		sessionStorage.setItem("setHexColor", hexColor);
+		
+		
       }
-    });
+    }
+	
+	function hslToHex(h, s, l) {
+	  h /= 360;
+	  s /= 100;
+	  l /= 100;
+	  let r, g, b;
+	  if (s === 0) {
+		r = g = b = l; // achromatic
+	  } else {
+		const hue2rgb = (p, q, t) => {
+		  if (t < 0) t += 1;
+		  if (t > 1) t -= 1;
+		  if (t < 1 / 6) return p + (q - p) * 6 * t;
+		  if (t < 1 / 2) return q;
+		  if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
+		  return p;
+		};
+		const q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+		const p = 2 * l - q;
+		r = hue2rgb(p, q, h + 1 / 3);
+		g = hue2rgb(p, q, h);
+		b = hue2rgb(p, q, h - 1 / 3);
+	  }
+	  const toHex = x => {
+		const hex = Math.round(x * 255).toString(16);
+		return hex.length === 1 ? '0' + hex : hex;
+	  };
+	  return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+	}
+	
+    function finishDrag() {
+		
+      document.onmouseup = null;
+      document.onmousemove = null;
+	  onColorUp();
+	  
+    }
