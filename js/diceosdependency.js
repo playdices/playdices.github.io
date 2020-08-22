@@ -331,12 +331,10 @@ function openSettings(){
 	ShowObjectWithEffect('settingsWindow', 1, 'fade', 500, 'easeOutExpo');
 }
 
-document.getElementById("setCancel").addEventListener("click", onColorDown);
-
-function cancelSettings(){
+document.getElementById("setCancel").addEventListener("click", function(){
 	ShowObjectWithEffect('layerGround', 0, 'fade', 500, 'easeOutExpo');
 	ShowObjectWithEffect('settingsWindow', 0, 'fade', 500, 'easeOutExpo');
-}
+});
 
 
 /////////////// SETTINGS FUNCTION ////////////////////
