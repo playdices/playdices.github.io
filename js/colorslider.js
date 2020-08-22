@@ -56,8 +56,8 @@ var divB = document.getElementById("thumbie");
 			divA.style.left = (0 + 0) + "px";
 		}
 		
-		if(divA.offsetLeft > 360){
-			divA.style.left = (360 + 0) + "px";
+		if(divA.offsetLeft > 350){
+			divA.style.left = (350 + 0) + "px";
 		}
         
 		

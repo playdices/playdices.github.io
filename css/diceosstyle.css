@@ -330,3 +330,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', end
 .setbuttons{
 	margin: 15px 15px 10px 0px;
 }
+
+.seperator{
+	display: inline;
+	margin-left: 5px;
+}

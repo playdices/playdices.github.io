@@ -327,13 +327,13 @@ function applyDialogAction(task){
 function openSettings(){
 	
 	updateDialogs();
-	ShowObjectWithEffect('layerGround', 1, 'fade', 500, 'easeOutExpo');
-	ShowObjectWithEffect('settingsWindow', 1, 'fade', 500, 'easeOutExpo');
+	ShowObjectWithEffect('layerGround', 1, 'fade', 250, 'easeOutExpo');
+	ShowObjectWithEffect('settingsWindow', 1, 'fade', 250, 'easeOutExpo');
 }
 
 document.getElementById("setCancel").addEventListener("click", function(){
-	ShowObjectWithEffect('layerGround', 0, 'fade', 500, 'easeOutExpo');
-	ShowObjectWithEffect('settingsWindow', 0, 'fade', 500, 'easeOutExpo');
+	document.getElementById("layerGround").style.display = "none";
+	document.getElementById("settingsWindow").style.display = "none";
 });
 
 
