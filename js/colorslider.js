@@ -1,18 +1,17 @@
-
-	var divB = document.getElementById("thumbie");
+var divB = document.getElementById("thumbie");
 
 	divB.addEventListener("mousedown", onColorDown);
 	divB.addEventListener("mouseup", onColorUp);
 
 	function onColorDown() {
 	  $(this).addClass("pop");
-	  $(this).parent(".slider").addClass("grad");
+	  $(this).parent(".sliderio").addClass("grad");
 	}
 
 	function onColorUp() {
 
 	  $(this).removeClass("pop");
-	  $(this).parent(".slider").removeClass("grad");
+	  $(this).parent(".sliderio").removeClass("grad");
 	  changeSlider();
 
 	}
