@@ -236,7 +236,8 @@ body{
   position: relative;
   width: 360px;
   height: 4px;
-  margin: 10%;
+  margin: 10px 10px 10px 10px;
+  
   border-radius: 2px;
   background: red;
 }
@@ -298,7 +299,34 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', end
 
 /* Settings */
 .settings{
+  padding: 10px 20px 10px 20px;
+  
+}
+
+.settingsHead{
+  margin: 10px 20px 10px 20px;
+  
+}
+
+.setHeader{
+	font-size: 30px;
+	
+}
+
+.setAreaSettings{
+	margin: 20px 20px 20px 20px;
+}
+
+.setContent{
   height: 310px;
   padding: 0px 20px 0px 20px;
   overflow-y: scroll;	
+}
+
+.sliderComponents{
+	display: none;
+}
+
+.setbuttons{
+	margin: 15px 15px 10px 0px;
 }

@@ -42,15 +42,15 @@ document.addEventListener("DOMContentLoaded", function loadDetails(){
 function initializeOS(){
    
    
-   startIntroJIE();
+   //startIntroJIE();
    greetUser();
    
-   document.getElementById("introJIE").addEventListener('ended',myHandler,false);
-    function myHandler(e) {
+   //document.getElementById("introJIE").addEventListener('ended',myHandler,false);
+    //function myHandler(e) {
 		utilityLoad();
         startIntroDICE(); 
 		userPortal();
-    }
+    //}
    
 }
 
@@ -331,8 +331,11 @@ function openSettings(){
 	ShowObjectWithEffect('settingsWindow', 1, 'fade', 500, 'easeOutExpo');
 }
 
-function hellox(){
-	alert("H");
+document.getElementById("setCancel").addEventListener("click", onColorDown);
+
+function cancelSettings(){
+	ShowObjectWithEffect('layerGround', 0, 'fade', 500, 'easeOutExpo');
+	ShowObjectWithEffect('settingsWindow', 0, 'fade', 500, 'easeOutExpo');
 }
 
 
