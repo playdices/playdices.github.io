@@ -26,32 +26,6 @@ var divB = document.getElementById("thumbie");
 		
 	  }
 	  
-	  if (sessionStorage.getItem("setOffsetColor").length !== 0) {
-		
-		var offsetColor = sessionStorage.getItem("setOffsetColor");
-		
-		
-		
-		if(offsetColor === 0){
-			alert("1");
-		}
-		else if(offsetColor === 40){alert("2");}
-		else if(offsetColor === 60){alert("3");}
-		else if(offsetColor === 100){alert("4");}
-		else if(offsetColor === 150){alert("5");}
-		else if(offsetColor === 170){alert("6");}
-		else if(offsetColor === 190){alert("7");}
-		else if(offsetColor === 200){alert("8");}
-		else if(offsetColor === 220){alert("9");}
-		else if(offsetColor === 240){alert("10");}
-		else if(offsetColor === 260){alert("11");}
-		else if(offsetColor === 280){alert("12");}
-		else if(offsetColor === 300){alert("13");}
-		else if(offsetColor === 330){alert("14");}
-		else{ /* DO NOTHING */ };
-		
-	  }
-	  
 	}
 
 
@@ -78,16 +52,35 @@ var divB = document.getElementById("thumbie");
 			divA.style.left = (340 + 0) + "px";
 		}
         
-		
 		document.getElementById("offsetie").innerHTML = divA.offsetLeft;
 		
 		var hexColor = hslToHex(divA.offsetLeft,100,50);
-		document.getElementById("hexie").innerHTML = hexColor;
+		var offsetColor = divA.offsetLeft;
 		
+		document.getElementById("hexie").innerHTML = hexColor;
 		document.getElementById("thumbie").style.backgroundColor = hexColor;
 		
-		sessionStorage.setItem("setOffsetColor", divA.offsetLeft);
 		sessionStorage.setItem("setHexColor", hexColor);
+		
+		
+		if(offsetColor === 0){
+			alert("1");
+		}
+		else if(offsetColor === 40){alert("2");}
+		else if(offsetColor === 60){alert("3");}
+		else if(offsetColor === 100){alert("4");}
+		else if(offsetColor === 150){alert("5");}
+		else if(offsetColor === 170){alert("6");}
+		else if(offsetColor === 190){alert("7");}
+		else if(offsetColor === 200){alert("8");}
+		else if(offsetColor === 220){alert("9");}
+		else if(offsetColor === 240){alert("10");}
+		else if(offsetColor === 260){alert("11");}
+		else if(offsetColor === 280){alert("12");}
+		else if(offsetColor === 300){alert("13");}
+		else if(offsetColor === 330){alert("14");}
+		else{ /* DO NOTHING */ };
+		
 		
 		
       }
