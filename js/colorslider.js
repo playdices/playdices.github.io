@@ -48,7 +48,7 @@ var divB = document.getElementById("thumbie");
 		else if(offsetColor === 280){alert("12");}
 		else if(offsetColor === 300){alert("13");}
 		else if(offsetColor === 330){alert("14");}
-		else{ /*DO NOTHING */ };
+		else{ /* DO NOTHING */ };
 		
 	  }
 	  
