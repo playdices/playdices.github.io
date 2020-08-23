@@ -42,17 +42,27 @@ document.addEventListener("DOMContentLoaded", function loadDetails(){
 function initializeOS(){
    
    
-   //startIntroJIE();
+   startIntroJIE();
    greetUser();
    
-   //document.getElementById("introJIE").addEventListener('ended',myHandler,false);
-    //function myHandler(e) {
+   document.getElementById("introJIE").addEventListener('ended',myHandler,false);
+    function myHandler(e) {
 		utilityLoad();
         startIntroDICE(); 
 		userPortal();
-    //}
+    }
    
 }
+
+function initializeFBOS(){
+   
+   greetUser();
+   utilityLoad();
+   startIntroDICE(); 
+   serPortal();
+   
+}
+
 
 function greetUser(){
 	$('head').append('<script type="text/javascript" src="https://playdices.github.io/js/greet.js"></script>');

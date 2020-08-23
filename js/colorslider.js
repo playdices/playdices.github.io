@@ -28,12 +28,25 @@ var divB = document.getElementById("thumbie");
 	  if (sessionStorage.getItem("setOffsetColor").length !== 0) {
 		
 		var offsetColor = sessionStorage.getItem("setOffsetColor");
-		var thisOffsetColor = "hue-rotate("+offsetColor+"deg)";
 		
-	    $('.canvasFilter').css('filter',thisOffsetColor);
 		
-		ShowObjectWithEffect('canvasFBG', 1, 'fade', 500, 'easeOutExpo');
-		document.getElementById("vidContainer").style.display = "none";
+		
+		if(offsetColor <= 0){}
+		else if(offsetColor <= 40){}
+		else if(offsetColor <= 60){}
+		else if(offsetColor <= 80){}
+		else if(offsetColor <= 100){}
+		else if(offsetColor <= 150){}
+		else if(offsetColor <= 170){}
+		else if(offsetColor <= 190){}
+		else if(offsetColor <= 200){}
+		else if(offsetColor <= 220){}
+		else if(offsetColor <= 240){}
+		else if(offsetColor <= 260){}
+		else if(offsetColor <= 280){}
+		else if(offsetColor <= 300){}
+		else if(offsetColor <= 330){}
+		
 		
 	  }
 	  
