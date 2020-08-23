@@ -341,16 +341,16 @@ function openSettings(){
 
 		updateDialogs();
 	
-		ShowObjectWithEffect('layerGround', 1, 'fade', 500, 'easeOutExpo');
-		ShowObjectWithEffect('settingsWindow', 1, 'fade', 500, 'easeOutExpo');
+		ShowObjectWithEffect('layerGround', 1, 'fade', 250, 'easeOutExpo');
+		ShowObjectWithEffect('settingsWindow', 1, 'fade', 250, 'easeOutExpo');
 		
    }, 250);
 	
 }
 
 document.getElementById("setCancel").addEventListener("click", function(){
-	ShowObjectWithEffect('layerGround', 0, 'fade', 500, 'easeOutExpo');
-	ShowObjectWithEffect('settingsWindow', 0, 'fade', 500, 'easeOutExpo');
+	ShowObjectWithEffect('layerGround', 0, 'fade', 250, 'easeOutExpo');
+	ShowObjectWithEffect('settingsWindow', 0, 'fade', 250, 'easeOutExpo');
 });
 
 

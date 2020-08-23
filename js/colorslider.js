@@ -22,6 +22,7 @@ var divB = document.getElementById("thumbie");
 		var thisColor = sessionStorage.getItem("setHexColor");
 		
 		$('.sliderio').css('background-color',thisColor);
+		$('.bg-custom').css('background-color',thisColor);
 		
 	  }
 	  
@@ -31,10 +32,11 @@ var divB = document.getElementById("thumbie");
 		
 		
 		
-		if(offsetColor <= 0){}
+		if(offsetColor <= 0){
+			$(this).parent(".sliderio").removeClass("grad");
+		}
 		else if(offsetColor <= 40){}
 		else if(offsetColor <= 60){}
-		else if(offsetColor <= 80){}
 		else if(offsetColor <= 100){}
 		else if(offsetColor <= 150){}
 		else if(offsetColor <= 170){}
