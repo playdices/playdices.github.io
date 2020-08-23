@@ -33,7 +33,7 @@ var divB = document.getElementById("thumbie");
 	    $('.canvasFilter').css('filter',thisOffsetColor);
 		
 		ShowObjectWithEffect('canvasFBG', 1, 'fade', 500, 'easeOutExpo');
-		ShowObjectWithEffect('vidContainer', 0, 'fade', 500, 'easeOutExpo');
+		ShowObjectWithEffect('bgDICE', 0, 'fade', 500, 'easeOutExpo');
 		
 		
 	  }
