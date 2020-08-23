@@ -35,19 +35,19 @@ var divB = document.getElementById("thumbie");
 		if(offsetColor === 0){
 			alert("1");
 		}
-		else if(offsetColor === 40){alert("1");}
-		else if(offsetColor === 60){alert("1");}
-		else if(offsetColor === 100){alert("1");}
-		else if(offsetColor === 150){alert("1");}
-		else if(offsetColor === 170){alert("1");}
-		else if(offsetColor === 190){alert("1");}
-		else if(offsetColor === 200){alert("1");}
-		else if(offsetColor === 220){alert("1");}
-		else if(offsetColor === 240){alert("1");}
-		else if(offsetColor === 260){alert("1");}
-		else if(offsetColor === 280){alert("1");}
-		else if(offsetColor === 300){alert("1");}
-		else if(offsetColor === 330){alert("1");}
+		else if(offsetColor === 40){alert("2");}
+		else if(offsetColor === 60){alert("3");}
+		else if(offsetColor === 100){alert("4");}
+		else if(offsetColor === 150){alert("5");}
+		else if(offsetColor === 170){alert("6");}
+		else if(offsetColor === 190){alert("7");}
+		else if(offsetColor === 200){alert("8");}
+		else if(offsetColor === 220){alert("9");}
+		else if(offsetColor === 240){alert("10");}
+		else if(offsetColor === 260){alert("11");}
+		else if(offsetColor === 280){alert("12");}
+		else if(offsetColor === 300){alert("13");}
+		else if(offsetColor === 330){alert("14");}
 		else{ //DO NOTHING};
 		
 	  }
