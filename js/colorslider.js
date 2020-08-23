@@ -23,7 +23,6 @@ var divB = document.getElementById("thumbie");
 		
 		$('.sliderio').css('background-color',thisColor);
 		$('.bg-custom').css('background-color',thisColor);
-		$("#navMenu").attr("data-ripple-color", thisColor);
 		
 	  }
 	  
@@ -34,21 +33,21 @@ var divB = document.getElementById("thumbie");
 		
 		
 		if(offsetColor <= 0){
-			$(this).parent(".sliderio").removeClass("grad");
+			alert("1);
 		}
-		else if(offsetColor <= 40){}
-		else if(offsetColor <= 60){}
-		else if(offsetColor <= 100){}
-		else if(offsetColor <= 150){}
-		else if(offsetColor <= 170){}
-		else if(offsetColor <= 190){}
-		else if(offsetColor <= 200){}
-		else if(offsetColor <= 220){}
-		else if(offsetColor <= 240){}
-		else if(offsetColor <= 260){}
-		else if(offsetColor <= 280){}
-		else if(offsetColor <= 300){}
-		else if(offsetColor <= 330){}
+		else if(offsetColor <= 40){alert("1);}
+		else if(offsetColor <= 60){alert("1);}
+		else if(offsetColor <= 100){alert("1);}
+		else if(offsetColor <= 150){alert("1);}
+		else if(offsetColor <= 170){alert("1);}
+		else if(offsetColor <= 190){alert("1);}
+		else if(offsetColor <= 200){alert("1);}
+		else if(offsetColor <= 220){alert("1);}
+		else if(offsetColor <= 240){alert("1);}
+		else if(offsetColor <= 260){alert("1);}
+		else if(offsetColor <= 280){alert("1);}
+		else if(offsetColor <= 300){alert("1);}
+		else if(offsetColor <= 330){alert("1);}
 		
 		
 	  }
