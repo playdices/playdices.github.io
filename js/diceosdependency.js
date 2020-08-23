@@ -98,16 +98,8 @@ function metroStyle(){
 	
 }
 
-function backgroundLoad(){
-	
-	
-	$('head').append('<script type="text/javascript" src="https://playdices.github.io/js/background.js"> </script>');
-	
-}
 
 function utilityLoad(){
-	
-	backgroundLoad();
 	
 	ShowObjectWithEffect('backdropped', 1, 'fade', 500, 'easeOutExpo');
 	$('head').append('<script type="text/javascript" src="https://playdices.github.io/js/date.js"> </script>');
