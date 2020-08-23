@@ -98,7 +98,16 @@ function metroStyle(){
 	
 }
 
+function backgroundLoad(){
+	
+	document.getElementById("backDrop").style.display = "none";
+	$('head').append('<script type="text/javascript" src="https://playdices.github.io/js/background.js"> </script>');
+	
+}
+
 function utilityLoad(){
+	
+	backgroundLoad();
 	
 	ShowObjectWithEffect('backdropped', 1, 'fade', 500, 'easeOutExpo');
 	$('head').append('<script type="text/javascript" src="https://playdices.github.io/js/date.js"> </script>');
@@ -323,17 +332,22 @@ function applyDialogAction(task){
 ////////////////////// MENU ///////////////////////////
 
 /////////////// SETTINGS FUNCTION ////////////////////
-
 function openSettings(){
 	
-	updateDialogs();
-	ShowObjectWithEffect('layerGround', 1, 'fade', 250, 'easeOutExpo');
-	ShowObjectWithEffect('settingsWindow', 1, 'fade', 250, 'easeOutExpo');
+	setTimeout(function openThisDialog(){ 
+
+		updateDialogs();
+	
+		ShowObjectWithEffect('layerGround', 1, 'fade', 500, 'easeOutExpo');
+		ShowObjectWithEffect('settingsWindow', 1, 'fade', 500, 'easeOutExpo');
+		
+   }, 250);
+	
 }
 
 document.getElementById("setCancel").addEventListener("click", function(){
-	document.getElementById("layerGround").style.display = "none";
-	document.getElementById("settingsWindow").style.display = "none";
+	ShowObjectWithEffect('layerGround', 0, 'fade', 500, 'easeOutExpo');
+	ShowObjectWithEffect('settingsWindow', 0, 'fade', 500, 'easeOutExpo');
 });
 
 
