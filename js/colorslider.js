@@ -30,7 +30,7 @@ var divB = document.getElementById("thumbie");
 		var offsetColor = sessionStorage.getItem("setOffsetColor");
 		var thisOffsetColor = "hue-rotate("+offsetColor+"deg)";
 		
-	    $('#bgDICE').css('filter',thisOffsetColor);
+	    $('.canvasFilter').css('filter',thisOffsetColor);
 		
 	  }
 	  
