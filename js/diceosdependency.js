@@ -335,11 +335,20 @@ function applyDialogAction(task){
 ////////////////////// MENU ///////////////////////////
 
 /////////////// SETTINGS FUNCTION ////////////////////
+
+function updateDialogSet(){
+	
+	//ShowObjectWithEffect('menuHolder', 0, 'slideup', 500, 'easeOutExpo');
+    document.getElementById("userMenuOP").value = "0";
+	document.getElementById("dialogOP").value = "1";
+	
+}
+
 function openSettings(){
 	
 	setTimeout(function openThisDialog(){ 
 
-		updateDialogs();
+		updateDialogSet();
 	
 		ShowObjectWithEffect('layerGround', 1, 'fade', 250, 'easeOutExpo');
 		ShowObjectWithEffect('settingsWindow', 1, 'fade', 250, 'easeOutExpo');

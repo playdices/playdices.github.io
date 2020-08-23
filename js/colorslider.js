@@ -23,6 +23,7 @@ var divB = document.getElementById("thumbie");
 		
 		$('.sliderio').css('background-color',thisColor);
 		$('.bg-custom').css('background-color',thisColor);
+		$("#navMenu").attr("data-ripple-color", thisColor);
 		
 	  }
 	  
