@@ -168,7 +168,6 @@ body{
 	
 /* background */
 
-
 /* header details */
 
 .rightie .headered{
@@ -334,4 +333,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', end
 .seperator{
 	display: inline;
 	margin-left: 5px;
+}
+
+#canvasBackground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.canvasFilter{
+	filter: hue-rotate(0);
 }

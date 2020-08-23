@@ -100,7 +100,7 @@ function metroStyle(){
 
 function backgroundLoad(){
 	
-	document.getElementById("backDrop").style.display = "none";
+	
 	$('head').append('<script type="text/javascript" src="https://playdices.github.io/js/background.js"> </script>');
 	
 }
