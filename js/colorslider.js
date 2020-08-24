@@ -68,11 +68,8 @@ var divB = document.getElementById("thumbie");
 		}
 		else if(offsetColor === 40){alert("2");}
 		else if(offsetColor === 60){alert("3");}
-		else if(offsetColor === 100){alert("4");}
 		else if(offsetColor === 150){alert("5");}
 		else if(offsetColor === 170){alert("6");}
-		else if(offsetColor === 190){alert("7");}
-		else if(offsetColor === 200){alert("8");}
 		else if(offsetColor === 220){alert("9");}
 		else if(offsetColor === 240){alert("10");}
 		else if(offsetColor === 260){alert("11");}
