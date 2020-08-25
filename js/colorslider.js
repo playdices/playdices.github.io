@@ -63,6 +63,8 @@ var divB = document.getElementById("thumbie");
 		document.getElementById("hexie").innerHTML = hexColor;
 		document.getElementById("thumbie").style.backgroundColor = hexColor;
 		
+		
+		
 		sessionStorage.setItem("setHexColor", hexColor);
 		sessionStorage.setItem("setHexColorSecondary", hexColorSecondary);
 		
@@ -114,6 +116,7 @@ var divB = document.getElementById("thumbie");
 			videoBG.src = "https://playdices.github.io/videos/background"+hue+".mp4";
 			videoBG.load();
 			videoBG.play();
+			document.getElementById("hueBG").style.backgroundColor = hue;
 		}
 		else{ /*DO NOTHING */ }
 		
