@@ -63,7 +63,7 @@ var divB = document.getElementById("thumbie");
 		sessionStorage.setItem("setHexColor", hexColor);
 		
 		
-		if(offsetColor === 5){
+		if(offsetColor === 3){
 			backgroundChange(0);
 		}
 		else if(offsetColor === 25){
