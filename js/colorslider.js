@@ -61,10 +61,9 @@ var divB = document.getElementById("thumbie");
 		var hexColorSecondary = hslToHexSecondary(offsetColor,50,50);
 		
 		document.getElementById("hexie").innerHTML = hexColor;
+		document.getElementById("hexSie").innerHTML = hexColorSecondary;
 		document.getElementById("thumbie").style.backgroundColor = hexColor;
-		
-		
-		
+
 		sessionStorage.setItem("setHexColor", hexColor);
 		sessionStorage.setItem("setHexColorSecondary", hexColorSecondary);
 		
