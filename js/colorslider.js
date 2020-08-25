@@ -66,16 +66,16 @@ var divB = document.getElementById("thumbie");
 		if(offsetColor === 5){
 			backgroundChange(0);
 		}
-		else if(offsetColor === 40){
+		else if(offsetColor === 25){
 			backgroundChange(40);
 		}
-		else if(offsetColor === 60){
+		else if(offsetColor === 50){
 			backgroundChange(60);
 		}
-		else if(offsetColor === 150){
+		else if(offsetColor === 100){
 			backgroundChange(150);
 		}
-		else if(offsetColor === 170){
+		else if(offsetColor === 150){
 			backgroundChange(170);
 		}
 		else if(offsetColor === 220){
