@@ -19,9 +19,15 @@ var divB = document.getElementById("thumbie");
 	function changeSlider(){
 		
 		if (sessionStorage.getItem("setHexColor").length !== 0) {
-		var thisColor = sessionStorage.getItem("setHexColor");
 		
+		var thisColor = sessionStorage.getItem("setHexColor");
 		$('.sliderio').css('background-color',thisColor);
+		
+	  }
+	  
+	  if(sessionStorage.getItem("setHexColorSecondary").length !== 0 {
+		
+		var thisColorSecondary = sessionStorage.getItem("setHexColorSecondary");
 		$('.bg-custom').css('background-color',thisColor);
 		
 	  }
@@ -54,14 +60,15 @@ var divB = document.getElementById("thumbie");
         
 		document.getElementById("offsetie").innerHTML = divA.offsetLeft;
 		
-		var hexColor = hslToHex(divA.offsetLeft,50,50);
+		var hexColor = hslToHex(divA.offsetLeft,100,50);
+		var hexColorSecondary = hslToHex(divA.offsetLeft,50,50);
 		var offsetColor = divA.offsetLeft;
 		
 		document.getElementById("hexie").innerHTML = hexColor;
 		document.getElementById("thumbie").style.backgroundColor = hexColor;
 		
 		sessionStorage.setItem("setHexColor", hexColor);
-		
+		sessionStorage.setItem("setHexColorSecondary", hexColorSecondary);
 		
 		if(offsetColor === 3){
 			backgroundChange(0);
