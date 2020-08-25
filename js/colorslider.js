@@ -109,13 +109,17 @@ var divB = document.getElementById("thumbie");
 		
 		if(hue >=40 || hue <=330){
 			videoBG.src = "https://playdices.github.io/videos/background"+hue+".mp4";
+			videoBG.load();
+			videoBG.play();
 		}
-		else{
+		else if(hue === 0){
+			
 			videoBG.src = "https://playdices.github.io/videos/background.mp4";
+			videoBG.load();
+			videoBG.play();
 		}
-		videoBG.load();
-		videoBG.play();
-	
+		else{ /*DO NOTHING */ }
+		
 	}
 	
 	function hslToHex(h, s, l) {
