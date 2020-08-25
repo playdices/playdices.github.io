@@ -105,7 +105,7 @@ var divB = document.getElementById("thumbie");
 	
 	function backgroundChange(){
 
-		var videoBG = $('#videoBackground video')[0];
+		var videoBG = document.getElementById("videoBackground");
 		videoBG.src = 'https://playdices.github.io/videos/background40.mp4';
 		videoBG.load();
 		videoBG.play();
