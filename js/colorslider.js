@@ -64,37 +64,37 @@ var divB = document.getElementById("thumbie");
 		
 		
 		if(offsetColor === 0){
-			backgroundChange();
+			backgroundChange(0);
 		}
 		else if(offsetColor === 40){
-			backgroundChange();
+			backgroundChange(40);
 		}
 		else if(offsetColor === 60){
-			backgroundChange();
+			backgroundChange(60);
 		}
 		else if(offsetColor === 150){
-			backgroundChange();
+			backgroundChange(150);
 		}
 		else if(offsetColor === 170){
-			backgroundChange();
+			backgroundChange(170);
 		}
 		else if(offsetColor === 220){
-			backgroundChange();
+			backgroundChange(220);
 		}
 		else if(offsetColor === 240){
-			backgroundChange();
+			backgroundChange(240);
 		}
 		else if(offsetColor === 260){
-			backgroundChange();
+			backgroundChange(260);
 		}
 		else if(offsetColor === 280){
-			backgroundChange();
+			backgroundChange(280);
 		}
 		else if(offsetColor === 300){
-			backgroundChange();
+			backgroundChange(300);
 		}
 		else if(offsetColor === 330){
-			backgroundChange();
+			backgroundChange(330);
 		}
 		else{ /* DO NOTHING */ };
 		
@@ -103,10 +103,16 @@ var divB = document.getElementById("thumbie");
       }
     }
 	
-	function backgroundChange(){
-
+	function backgroundChange(size){
+		
 		var videoBG = document.getElementById("videoBackground");
-		videoBG.src = "https://playdices.github.io/videos/background40.mp4";
+		
+		if(size >=40 || size <=330){
+			videoBG.src = "https://playdices.github.io/videos/background"+size+".mp4";
+		}
+		else{
+			videoBG.src = "https://playdices.github.io/videos/background.mp4";
+		}
 		videoBG.load();
 		videoBG.play();
 	
