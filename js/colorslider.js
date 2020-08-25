@@ -64,37 +64,37 @@ var divB = document.getElementById("thumbie");
 		
 		
 		if(offsetColor === 0){
-			alert("1");
+			backgroundChange();
 		}
 		else if(offsetColor === 40){
-			alert("2");
+			backgroundChange();
 		}
 		else if(offsetColor === 60){
-			alert("3");
+			backgroundChange();
 		}
 		else if(offsetColor === 150){
-			alert("5");
+			backgroundChange();
 		}
 		else if(offsetColor === 170){
-			alert("6");
+			backgroundChange();
 		}
 		else if(offsetColor === 220){
-			alert("9");
+			backgroundChange();
 		}
 		else if(offsetColor === 240){
-			alert("10");
+			backgroundChange();
 		}
 		else if(offsetColor === 260){
-			alert("11");
+			backgroundChange();
 		}
 		else if(offsetColor === 280){
-			alert("12");
+			backgroundChange();
 		}
 		else if(offsetColor === 300){
-			alert("13");
+			backgroundChange();
 		}
 		else if(offsetColor === 330){
-			alert("14");
+			backgroundChange();
 		}
 		else{ /* DO NOTHING */ };
 		
