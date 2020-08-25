@@ -116,7 +116,8 @@ var divB = document.getElementById("thumbie");
 			videoBG.src = "https://playdices.github.io/videos/background"+hue+".mp4";
 			videoBG.load();
 			videoBG.play();
-			document.getElementById("hueBG").style.backgroundColor = hue;
+			
+			document.getElementById("hueBG").innerHTML = hue;
 		}
 		else{ /*DO NOTHING */ }
 		
