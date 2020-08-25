@@ -305,6 +305,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', end
 
 }
 
+.txshadow{
+
+	text-shadow: 1px 1px 4px #080808;
+	
+}
+
 .settings{
   padding: 10px 20px 10px 20px;
   

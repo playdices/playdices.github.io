@@ -338,7 +338,7 @@ function applyDialogAction(task){
 
 function updateDialogSet(){
 	
-	//ShowObjectWithEffect('menuHolder', 0, 'slideup', 500, 'easeOutExpo');
+	ShowObjectWithEffect('menuHolder', 0, 'slideup', 500, 'easeOutExpo');
     document.getElementById("userMenuOP").value = "0";
 	document.getElementById("dialogOP").value = "1";
 	

@@ -54,7 +54,7 @@ var divB = document.getElementById("thumbie");
         
 		document.getElementById("offsetie").innerHTML = divA.offsetLeft;
 		
-		var hexColor = hslToHex(divA.offsetLeft,100,50);
+		var hexColor = hslToHex(divA.offsetLeft,50,50);
 		var offsetColor = divA.offsetLeft;
 		
 		document.getElementById("hexie").innerHTML = hexColor;
