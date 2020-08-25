@@ -103,12 +103,12 @@ var divB = document.getElementById("thumbie");
       }
     }
 	
-	function backgroundChange(size){
+	function backgroundChange(hue){
 		
 		var videoBG = document.getElementById("videoBackground");
 		
-		if(size >=40 || size <=330){
-			videoBG.src = "https://playdices.github.io/videos/background"+size+".mp4";
+		if(hue >=40 || hue <=330){
+			videoBG.src = "https://playdices.github.io/videos/background"+hue+".mp4";
 		}
 		else{
 			videoBG.src = "https://playdices.github.io/videos/background.mp4";
