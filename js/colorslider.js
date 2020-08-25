@@ -107,14 +107,8 @@ var divB = document.getElementById("thumbie");
 		
 		var videoBG = document.getElementById("videoBackground");
 		
-		if(hue >=40 || hue <=330){
+		if(hue >=0 || hue <=330){
 			videoBG.src = "https://playdices.github.io/videos/background"+hue+".mp4";
-			videoBG.load();
-			videoBG.play();
-		}
-		else if(hue === 0){
-			
-			videoBG.src = "https://playdices.github.io/videos/background.mp4";
 			videoBG.load();
 			videoBG.play();
 		}
