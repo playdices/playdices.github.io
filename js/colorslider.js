@@ -19,13 +19,15 @@ var divB = document.getElementById("thumbie");
 	function changeSlider(){
 		
 		if (sessionStorage.getItem("setHexColor").length !== 0) {
-		var thisColor = sessionStorage.getItem("setHexColor");
+			var thisColor = sessionStorage.getItem("setHexColor");
+			$('.sliderio').css('background-color',thisColor);
+		}
 		
-		$('.sliderio').css('background-color',thisColor);
-		$('.bg-custom').css('background-color',thisColor);
+		if (sessionStorage.getItem("setHexColorSecondary").length !== 0) {
+			var thisColorSecondary = sessionStorage.getItem("setHexColorSecondary");
+			$('.bg-custom').css('background-color',thisColorSecondary);
+		}
 		
-	  }
-	  
 	}
 
 
