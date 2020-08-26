@@ -337,7 +337,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', end
 }
 
 .sliderComponents{
-	display: inline;
+	display: none;
 }
 
 .setbuttons{
@@ -355,3 +355,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', end
 	width: 100%;
     height: 100%;
 }
+
+/* TASKBAR */
+
+.icon-home{
+	
+  margin-top:16px;
+	
+}
+
+.icon-img{
+	
+  margin-top:16px;	
+  width: 28px;
+  height: 28px;
+	
+}
+
+/* TASKBAR */
