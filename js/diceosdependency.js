@@ -245,7 +245,7 @@ function openDialog(dialogType){
 		addContent = '<span class="noselect">Welcome to DICE webOS!<br /></span>'+
 		'<div class="aboutThis noselect"><ul>'+
 		  "<li>Enjoy exploring the apps and get dicing!</li>"+
-		  "<li>Click or right click your profile picture to open a menu below it, click and explore each function of the components of the menu. Click your profile picture again to close the menu."+
+		  "<li>Click or right click your profile picture to open a menu below it, click and explore each function of the components of the user menu. Click your profile picture again to close the user menu."+
 		  "<li>There is a setting in the menu, you can customize your personal interface!</li>"+
 		  "<li>There are two types of apps that you can open: internal and external. If you get an alert, thats an external app. If not thats an internal app.</li>"+
 		  "<li>By default, there are internal apps that can be classified as utility or game apps. Swipe top-left corner to minimize it or swipe down-left corner to close it.</li>"+
