@@ -22,6 +22,7 @@ window.addEventListener('resize', function(){
 
 document.addEventListener("DOMContentLoaded", function loadDetails(){
 
+	Animate('appBaseArea', '0', '0', '100%', '0', '', 500, '');
 	var videoHD = document.getElementById('introJIE');
 	videoHD.src = 'https://playdices.github.io/videos/intronly.mp4';
 	videoHD.load();
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function loadDetails(){
     document.getElementById("dialogOP").style.display = "none";
 	document.getElementById("playIntroButton").setAttribute("class", "pointerPlay");
 	document.getElementById("bgDICE").style.display = "none";
+	
 
 });
 
@@ -245,10 +247,15 @@ function openDialog(dialogType){
 		addContent = '<span class="noselect">Welcome to DICE webOS!<br /></span>'+
 		'<div class="aboutThis noselect"><ul>'+
 		  "<li>Enjoy exploring the apps and get dicing!</li>"+
-		  "<li>Click or right click your profile picture to open a menu below it, click and explore each function of the components of the user menu. Click your profile picture again to close the user menu."+
+		  "<li>Click/Tap or right click your profile picture to open a menu below it, click and explore each function of the components of the user menu. Click your profile picture again to close the user menu."+
 		  "<li>There is a setting in the menu, you can customize your personal interface!</li>"+
 		  "<li>There are two types of apps that you can open: internal and external. If you get an alert, thats an external app. If not thats an internal app.</li>"+
-		  "<li>By default, there are internal apps that can be classified as utility or game apps. Swipe top-left corner to minimize it or swipe down-left corner to close it.</li>"+
+		  "<li>By default, there are internal apps that can be classified as utility or game apps.</li>"+
+		  "<li>As you open an internal app you can hover the top-left corner then you will see a dice button (also known as the Central button) so click/tap it!</li>"+
+		  "<li>When it you trigger it, a taskbar will open! To hide it, double click the Central button then move your cursor away from the top-left corner.</li>"+
+		  "<li>When you click/tap the Home button from the taskbar it will bring you back to the central menu so you can open more internal or external apps!</li>"+
+		  "<li>Moreover, by cliking/tapping the home button again will bring you back to the recent app that you just opened!</li>"+
+		  "<li>You can only show and close an internal app by clicking it, to hide it click/tap the home button!</li>"+
 		  "<li>On your way, there could be a chance that your opening an external app. Opening an external app can be confusing. You can Ctrl+W to close it or Ctrl+Shift+Tab to keep it on background and go back to the start menu, to go back Ctrl+Tab. If you open two external apps then Ctrl+Shift+Tab twice, just navagate external apps with the Ctrl+Shift+Tab and Ctrl+Tab key properly.</li>"+
 		"</ul></div>";  
 
@@ -364,3 +371,194 @@ document.getElementById("setCancel").addEventListener("click", function(){
 
 
 /////////////// SETTINGS FUNCTION ////////////////////
+
+/////////////// TASKBAR FUNCTION ////////////////////
+
+document.addEventListener("DOMContentLoaded", function loadStart(){
+
+	document.getElementById("mainDiceFloat").addEventListener("mouseover", diceVisible);
+	document.getElementById("mainDiceFloat").addEventListener("mouseout", diceInvisible);
+	document.getElementById("mainDiceFloat").addEventListener("click", centralCall);
+	
+	document.getElementById("centralButton").addEventListener("dblclick", centralFloatCall);
+	document.getElementById("homeButton").addEventListener("click", homeButtFunction);
+	
+	document.getElementById("mainDiceTaskbar").style.display = "none";
+	document.getElementById("homeUserOP").value = "0";
+	document.getElementById("appsRunningOP").value = "0";
+	
+	$('#mainDiceFloat').css('opacity','0.0');
+
+});
+
+function showDiceAppBaseArea(){
+	Animate('appBaseArea', '0', '0', '100%', '100%', '', 500, '');
+}
+
+function hideDiceAppBaseArea(){
+	Animate('appBaseArea', '0', '0', '100%', '0', '', 500, '');
+}
+
+function updateDiceAppBaseAnim(){
+	document.getElementById("homeUserOP").value = "0";
+}
+
+function updateDiceAppBaseAnimClose(){
+	document.getElementById("homeUserOP").value = "1";
+}
+
+function addRunningApp(){
+	var computeRunApp = Number(document.getElementById("appsRunningOP").value) + Number("1");
+	document.getElementById("appsRunningOP").value = computeRunApp;
+	
+	nodeDiceCentralIcon();
+}
+
+function removeRunningApp(){
+	var computeRunApp = Number(document.getElementById("appsRunningOP").value) - Number("1");
+	if(computeRunApp <= 0){ 
+		document.getElementById("appsRunningOP").value = "0"; 
+	}
+	else{
+		document.getElementById("appsRunningOP").value = computeRunApp;
+	}
+	
+	nodeDiceCentralIcon();
+}
+
+function nodeDiceCentralIcon(){
+	
+	var appsRunning = Number(document.getElementById("appsRunningOP").value);
+	
+	if(appsRunning === 0){
+		ShowObjectWithEffect('taskbarArea', 0, 'fade', 250, 'easeOutExpo');
+		ShowObjectWithEffect('appBaseArea', 0, 'fade', 250, 'easeOutExpo');
+	}
+	else{
+		ShowObjectWithEffect('taskbarArea', 1, 'fade', 250, 'easeOutExpo');
+		ShowObjectWithEffect('appBaseArea', 1, 'fade', 250, 'easeOutExpo');
+	}
+	
+}
+
+//////////////////////////////////////////
+
+function closeApp(appID){
+
+	$( "."+appID ).remove();
+	hideDiceAppBaseArea();
+	updateDiceAppBaseAnimClose();
+	removeRunningApp();
+	
+}
+
+function showDiceApp(appID){
+	
+	$(".diceAppGeneral").hide();
+	$( "#"+appID+"FRAME" ).show();
+	showDiceAppBaseArea();
+	updateDiceAppBaseAnim();
+	
+}
+
+//////////////////////////////////////////
+
+function diceVisible(){
+	$('#mainDiceFloat').css('opacity','1.0');
+}
+function diceInvisible(){
+	$('#mainDiceFloat').css('opacity','0.0');
+}
+
+function centralCall(){
+	document.getElementById("mainDiceTaskbar").style.display = "block";
+	document.getElementById("mainDiceFloat").style.display = "none";
+}
+
+function centralFloatCall(){
+	document.getElementById("mainDiceTaskbar").style.display = "none";
+	document.getElementById("mainDiceFloat").style.display = "block";
+}
+
+function homeButtFunction(){
+	
+	var appsRunning = Number(document.getElementById("appsRunningOP").value);
+	
+	if(appsRunning >= 1){
+		
+		var state = document.getElementById("homeUserOP").value;
+		
+		if(state === "0"){
+			document.getElementById("homeUserOP").value = "1";
+			hideDiceAppBaseArea();
+		}
+		else{
+			document.getElementById("homeUserOP").value = "0";
+			showDiceAppBaseArea();
+		}
+	}
+	
+}
+
+//////////////////////////////////////////
+
+function openAppSYM(name,appID,site,icoSYM){
+	
+	//alert("Name: "+name+" AppID: "+appID+" Site: "+site+" ICO: "+icoSYM);
+	var checkApp = document.getElementById(appID+"ICO");
+	
+	if(!checkApp){
+		
+		var thisAppICON = '<li id="'+appID+'ICO" class="'+appID+'"><a href="#" class="dropdown-toggle" title="'+name+'"><span class="icon '+icoSYM+'"></span></a>'+
+		'<ul class="t-menu horizontal fg-white bg-custom" data-role="dropdown">'+
+		'<li><a href="#" onclick="showDiceApp(\''+appID+'\');"><span class="icon mif-enlarge2"></span></a></li>'+
+		'<li><a href="#" onclick="closeApp(\''+appID+'\');"><span class="icon mif-cross"></span></a></li>'+
+		'</ul></li>';
+		
+		$('#mainDiceTaskbar').append(thisAppICON);
+		
+		var thisAppFRAME = '<iframe src="'+site+'" class="appFrameDesign diceAppGeneral '+appID+'" id="'+appID+'FRAME"></iframe>';
+		
+		$(".diceAppGeneral").hide();
+		$('#appBaseArea').append(thisAppFRAME);
+		showDiceAppBaseArea();
+		updateDiceAppBaseAnim();
+		addRunningApp();
+		
+	}
+	
+	
+	
+}
+
+function openAppIMG(name,appID,site,icoIMG){
+	
+	//alert("Name: "+name+" AppID: "+appID+" Site: "+site+" ICO: "+icoIMG);
+	var checkApp = document.getElementById(appID+"ICO");
+
+	if(!checkApp){
+
+		var lookApp = 'this'+appID;
+		var thisAppICON = '<li id="'+appID+'ICO" class="'+appID+'"><a href="#" class="dropdown-toggle" title="'+name+'"><img id="'+lookApp+'" class="icon-img"></a>'+
+		'<ul class="t-menu horizontal fg-white bg-custom" data-role="dropdown">'+
+		'<li><a href="#" onclick="showDiceApp(\''+appID+'\');"><span class="icon mif-enlarge2"></span></a></li>'+
+		'<li><a href="#" onclick="closeApp(\''+appID+'\');"><span class="icon mif-cross"></span></a></li>'+
+		'</ul></li>';
+		
+		$('#mainDiceTaskbar').append(thisAppICON);
+		document.getElementById(lookApp).src = icoIMG;
+		
+		var thisAppFRAME = '<iframe src="'+site+'" class="appFrameDesign diceAppGeneral '+appID+'" id="'+appID+'FRAME"></iframe>';
+		
+		$(".diceAppGeneral").hide();
+		$('#appBaseArea').append(thisAppFRAME);
+		showDiceAppBaseArea();
+		updateDiceAppBaseAnim();
+		addRunningApp();
+
+	}
+	
+	
+}
+
+/////////////// TASKBAR FUNCTION ////////////////////
