@@ -562,3 +562,13 @@ function openAppIMG(name,appID,site,icoIMG){
 }
 
 /////////////// TASKBAR FUNCTION ////////////////////
+
+///////////// APPS FUNCTION /////////////////
+function updateDialogCalc(){
+	
+	document.getElementById("dialogOP").value = "1";
+	
+}
+
+
+///////////// APPS FUNCTION /////////////////
