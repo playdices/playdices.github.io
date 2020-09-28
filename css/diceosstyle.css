@@ -412,6 +412,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', end
 	background-color: #404550;
 }
 
+.bg-notepad{
+	background-color: #7d5846;
+}
+
 .bg-google{
 	background-color: #5F6368;
 }
