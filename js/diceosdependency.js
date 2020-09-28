@@ -267,7 +267,7 @@ function openDialog(dialogType){
    Metro.dialog.create({
        title: ""+addTitle,
        content: ""+addContent,
-	   closeButton: true
+	   closeButton: false
    });
 }
 
@@ -458,6 +458,7 @@ function showDiceApp(appID){
 	$( "#"+appID+"FRAME" ).show();
 	showDiceAppBaseArea();
 	updateDiceAppBaseAnim();
+	centralFloatCall();
 	
 }
 
@@ -491,6 +492,7 @@ function homeButtFunction(){
 		if(state === "0"){
 			document.getElementById("homeUserOP").value = "1";
 			hideDiceAppBaseArea();
+			centralFloatCall();
 		}
 		else{
 			document.getElementById("homeUserOP").value = "0";
@@ -510,12 +512,13 @@ function openAppSYM(name,appID,site,icoSYM){
 	if(!checkApp){
 		
 		var thisAppICON = '<li id="'+appID+'ICO" class="'+appID+'"><a href="#" class="dropdown-toggle" title="'+name+'"><span class="icon '+icoSYM+'"></span></a>'+
-		'<ul class="t-menu horizontal fg-white bg-custom" data-role="dropdown">'+
+		'<ul class="t-menu horizontal fg-white bg-custom-child" data-role="dropdown">'+
 		'<li><a href="#" onclick="showDiceApp(\''+appID+'\');"><span class="icon mif-enlarge2"></span></a></li>'+
 		'<li><a href="#" onclick="closeApp(\''+appID+'\');"><span class="icon mif-cross"></span></a></li>'+
 		'</ul></li>';
 		
 		$('#mainDiceTaskbar').append(thisAppICON);
+		
 		
 		var thisAppFRAME = '<iframe src="'+site+'" class="appFrameDesign diceAppGeneral '+appID+'" id="'+appID+'FRAME"></iframe>';
 		
@@ -525,6 +528,9 @@ function openAppSYM(name,appID,site,icoSYM){
 		updateDiceAppBaseAnim();
 		addRunningApp();
 		
+	}
+	else{
+		showDiceApp(appID);
 	}
 	
 	
@@ -556,6 +562,9 @@ function openAppIMG(name,appID,site,icoIMG){
 		updateDiceAppBaseAnim();
 		addRunningApp();
 
+	}
+	else{
+		showDiceApp(appID);
 	}
 	
 	

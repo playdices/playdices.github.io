@@ -305,6 +305,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', end
 
 }
 
+.bg-custom-child{
+	
+	background-color: #686868;
+
+}
+
+
 .txshadow{
 
 	text-shadow: 1px 1px 4px #080808;
@@ -403,5 +410,29 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', end
 
 .bg-google{
 	background-color: #5F6368;
+}
+
+.bg-youtube{
+	background-color: #F3000F;
+}
+
+.bg-netflix{
+	background-color: #000000;
+}
+
+.bg-cmd{
+	background-color: #535353;
+}
+
+.bg-fb{
+	background-color: #3A5696;
+}
+
+.bg-twitter{
+	background-color: #1C9CEA;
+}
+
+.bg-instagram{
+	background-color: #0178D7;
 }
 /* APP */
