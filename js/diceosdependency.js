@@ -512,7 +512,7 @@ function openAppSYM(name,appID,site,icoSYM){
 	if(!checkApp){
 		
 		var thisAppICON = '<li id="'+appID+'ICO" class="'+appID+'"><a href="#" class="dropdown-toggle" title="'+name+'"><span class="icon '+icoSYM+'"></span></a>'+
-		'<ul class="t-menu horizontal fg-white bg-custom-child" data-role="dropdown">'+
+		'<ul class="t-menu horizontal fg-white bg-child-custom" data-role="dropdown">'+
 		'<li><a href="#" onclick="showDiceApp(\''+appID+'\');"><span class="icon mif-enlarge2"></span></a></li>'+
 		'<li><a href="#" onclick="closeApp(\''+appID+'\');"><span class="icon mif-cross"></span></a></li>'+
 		'</ul></li>';
@@ -546,7 +546,7 @@ function openAppIMG(name,appID,site,icoIMG){
 
 		var lookApp = 'this'+appID;
 		var thisAppICON = '<li id="'+appID+'ICO" class="'+appID+'"><a href="#" class="dropdown-toggle" title="'+name+'"><img id="'+lookApp+'" class="icon-img"></a>'+
-		'<ul class="t-menu horizontal fg-white bg-custom" data-role="dropdown">'+
+		'<ul class="t-menu horizontal fg-white bg-child-custom" data-role="dropdown">'+
 		'<li><a href="#" onclick="showDiceApp(\''+appID+'\');"><span class="icon mif-enlarge2"></span></a></li>'+
 		'<li><a href="#" onclick="closeApp(\''+appID+'\');"><span class="icon mif-cross"></span></a></li>'+
 		'</ul></li>';
