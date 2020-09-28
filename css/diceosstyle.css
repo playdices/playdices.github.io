@@ -429,7 +429,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', end
 }
 
 .bg-cmd{
-	background-color: #535353;
+	background-color: #414141;
+}
+
+.bg-tools{
+	background-color: #441E4B;
 }
 
 .bg-fb{
