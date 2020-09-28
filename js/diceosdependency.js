@@ -1,7 +1,12 @@
-//RIGHT CLICK PROPERTIES
-$('.static').bind('contextmenu', function(e) {
-    return false;
-}); 
+//READY
+$( document ).ready(function() {
+    
+	//RIGHT CLICK PROPERTIES
+	$('.static').bind('contextmenu', function(e) {
+		return false;
+	}); 
+
+});
 
 
 //EXIT DICE OS IF BROWSER IS NOT FULLSCREEN
@@ -18,7 +23,6 @@ window.addEventListener('resize', function(){
 	*/
 	
 });
-
 
 document.addEventListener("DOMContentLoaded", function loadDetails(){
 
@@ -378,6 +382,9 @@ document.addEventListener("DOMContentLoaded", function loadStart(){
 
 	document.getElementById("mainDiceFloat").addEventListener("mouseover", diceVisible);
 	document.getElementById("mainDiceFloat").addEventListener("mouseout", diceInvisible);
+	
+	document.getElementById("mainDiceFloat").addEventListener("mouseover", diceVisible);
+	
 	document.getElementById("mainDiceFloat").addEventListener("click", centralCall);
 	
 	document.getElementById("centralButton").addEventListener("dblclick", centralFloatCall);
@@ -431,11 +438,11 @@ function nodeDiceCentralIcon(){
 	var appsRunning = Number(document.getElementById("appsRunningOP").value);
 	
 	if(appsRunning === 0){
-		ShowObjectWithEffect('taskbarArea', 0, 'fade', 250, 'easeOutExpo');
+		ShowObjectWithEffect('taskbarAreaX', 0, 'fade', 250, 'easeOutExpo');
 		ShowObjectWithEffect('appBaseArea', 0, 'fade', 250, 'easeOutExpo');
 	}
 	else{
-		ShowObjectWithEffect('taskbarArea', 1, 'fade', 250, 'easeOutExpo');
+		ShowObjectWithEffect('taskbarAreaX', 1, 'fade', 250, 'easeOutExpo');
 		ShowObjectWithEffect('appBaseArea', 1, 'fade', 250, 'easeOutExpo');
 	}
 	
@@ -445,7 +452,7 @@ function nodeDiceCentralIcon(){
 
 function closeApp(appID){
 
-	$( "."+appID ).remove();
+	jQuery( "."+appID ).remove();
 	hideDiceAppBaseArea();
 	updateDiceAppBaseAnimClose();
 	removeRunningApp();
@@ -454,8 +461,10 @@ function closeApp(appID){
 
 function showDiceApp(appID){
 	
-	$(".diceAppGeneral").hide();
-	$( "#"+appID+"FRAME" ).show();
+	jQuery(".diceAppGeneral").hide();
+	jQuery( "#"+appID+"FRAME" ).show();
+	jQuery("#mainTabButton").show();
+	
 	showDiceAppBaseArea();
 	updateDiceAppBaseAnim();
 	centralFloatCall();
@@ -465,10 +474,13 @@ function showDiceApp(appID){
 //////////////////////////////////////////
 
 function diceVisible(){
+	
 	$('#mainDiceFloat').css('opacity','1.0');
+	
 }
 function diceInvisible(){
 	$('#mainDiceFloat').css('opacity','0.0');
+	
 }
 
 function centralCall(){
@@ -491,11 +503,18 @@ function homeButtFunction(){
 		
 		if(state === "0"){
 			document.getElementById("homeUserOP").value = "1";
+			jQuery("#mainTabButton").hide();
+			
+			document.getElementById("appsViewStatusOp").value = "0";
+			document.getElementById("changeTabSet").setAttribute("class", "icon mif-keyboard-tab");
+			document.getElementById("tabButton").setAttribute("title", "Tab View");
+			
 			hideDiceAppBaseArea();
 			centralFloatCall();
 		}
 		else{
 			document.getElementById("homeUserOP").value = "0";
+			jQuery("#mainTabButton").show();
 			showDiceAppBaseArea();
 		}
 	}
@@ -570,14 +589,45 @@ function openAppIMG(name,appID,site,icoIMG){
 	
 }
 
+
+
 /////////////// TASKBAR FUNCTION ////////////////////
 
 ///////////// APPS FUNCTION /////////////////
-function updateDialogCalc(){
+
+document.addEventListener("DOMContentLoaded", function loadStartApps(){
 	
-	document.getElementById("dialogOP").value = "1";
+	document.getElementById("appsViewStatusOp").value = "0";
+	document.getElementById("tabButton").addEventListener("click", appViewLayout);
+	
+});
+
+//APP VIEW FULL LAYOUT
+function appViewLayout(){
+	var appViewStatus = Number(document.getElementById("appsViewStatusOp").value);
+	
+	if(appViewStatus === 0){
+		
+		// Size of HTML document (same as pageHeight/pageWidth in screenshot).
+		var indention = 65;
+		var totalWidth = Number(document.documentElement.clientWidth) - indention;
+		
+		document.getElementById("appsViewStatusOp").value = "1";
+		document.getElementById("changeTabSet").setAttribute("class", "icon mif-enlarge");
+		document.getElementById("tabButton").setAttribute("title", "Fullscreen View");
+		
+		Animate('appBaseArea', indention, '0', totalWidth, '100%', '', 500, '');
+		
+	}
+	else{
+		document.getElementById("appsViewStatusOp").value = "0";
+		
+		document.getElementById("changeTabSet").setAttribute("class", "icon mif-keyboard-tab");
+		document.getElementById("tabButton").setAttribute("title", "Tab View");
+		
+		Animate('appBaseArea', '0', '0', '100%', '100%', '', 500, '');
+	}
 	
 }
-
 
 ///////////// APPS FUNCTION /////////////////
