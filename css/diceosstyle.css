@@ -408,6 +408,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', end
 	
 }
 
+.bg-photopea{
+	background-color: #404550;
+}
+
 .bg-google{
 	background-color: #5F6368;
 }
