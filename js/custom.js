@@ -535,6 +535,16 @@ document.addEventListener("DOMContentLoaded", function loadDetails(){
 
 /*== LOGIN webOS SCRIPTS ==*/
 
+/*== CLEAR CONSOLE ==*/
+function clearconsole() 
+ {  
+   console.log(window.console);   
+   if(window.console ) 
+   {     
+     console.clear(); 
+   } 
+ } 
+/*== CLEAR CONSOLE ==*/
 
 /*== GO TO TOP ON RELOAD FIX ==*/
 
