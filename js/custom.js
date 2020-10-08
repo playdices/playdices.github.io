@@ -526,6 +526,13 @@ document.addEventListener("DOMContentLoaded", function loadDetails(){
 		
 	}
 	
+	//CLEAR CONSOLE
+	setTimeout(function clearConsoled(){ 
+		clearconsole();
+    }, 150);
+	
+	
+	
 	
 });
 
