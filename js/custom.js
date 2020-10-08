@@ -531,9 +531,6 @@ document.addEventListener("DOMContentLoaded", function loadDetails(){
 		clearconsole();
     }, 150);
 	
-	
-	
-	
 });
 
 /*== LOGIN webOS SCRIPTS ==*/
